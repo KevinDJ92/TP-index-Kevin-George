@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Les Pro</title>
+	<meta name="author" content="Les Pro" >
+	<meta name="description" content="a linkedin but different" >
+	<link rel="stylesheet" href="css/main.css">
+	<script src="script/main.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+
+</head>
+<body id="bodyForm">
+<header>
+
+<div id="divLogoForm" class="row col-m-12 col-12 ">
+
+		<a href="index.html" class="col-mob-3 col-1"><img src="images/logo/logo.png" alt="lespro" id="logoForm"></a>
+		<img src="images/logo/lesPros.jpg" alt="lespro" id="banner" class="col-8"/>
+
+		<nav id="navheader" class="col-mob-12 col-m-10 col-10">
+			<ul>
+				<li><a href="index.html" class="navigation">Home</a></li>
+				<li><a href="search.html" class="navigation">Devenez un Membre</a></li>
+				<li><a href="singin.html" class="navigation">Connexion</a></li>
+
+
+			</ul>
+		</nav>
+		<form class="col-mob-12 col-m-8 col-8">
+			<input type="search" placeholder="chercher"class="col-mob-12"/>
+			<input type="submit" value="Soumettre" class="">
+		</form>
+
+
+	</div>
+	<div class="mobile-nav col-mob-12">
+		<!-- menu hamburger -->
+		<div class="menu-btn" id="menu-hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+
+
+</header>
+
+<main>
+
+<form class="formWrapper col-10" action="pending"  id="formFormul">
+	<h1 class=""> Devenez un Membre: </h1>
+	<ul class="row">
+		<li class="col-mob-12" ><label for="name" class="col-mob-12 col-m-3">Prenom <span>(*):</span></label>
+			<input type="text" id="name" value="name" placeholder="Name"  class="col-mob-12 col-m-9" required></li>
+		<li class="col-mob-12"><label for="lastName" class="col-mob-12 col-m-3">Nom <span>(*):</span></label>
+			<input type="text" id="lastName" value="lastName" placeholder="Last Name" class="col-mob-12 col-m-9" required></li>
+		<li class="col-mob-12"><label for="email" class="col-mob-12 col-m-3">Email <span>(*):</span></label>
+			<input type="email" name="email" id="email" placeholder="fulanito@detal.com" class="col-mob-12 col-m-9" required></li>
+		<li class="col-mob-12">
+			<p class="col-mob-12 col-m-3"><span>Genre:</span></p>
+			<ul class="row">
+				<li class="col-mob-4 col-m-4 col-2"><input type="checkbox" name="gender" id="female" value="female"/>
+					<label for="female">Femelle</label></li>
+				<li class="col-mob-4 col-m-4 col-2" ><input type="checkbox" name="gender" id="male" value="male"/>
+					<label for="male">Mâle</label></li>
+			</ul>
+		</li>
+		<li class="col-mob-12"><label for="password" class="col-mob-12 col-m-3">Mot de passe<span>(*):</span></label>
+			<input type="password" name="password" id="password" placeholder="password" class="col-mob-12 col-m-9" required/></li>
+		<li class="col-mob-12" ><label for="repassword" class="col-mob-12 col-m-3">Confirmez Mot<span>(*):</span></label>
+			<input type="password" name="repassword" id="repassword" placeholder="password" class="col-mob-12 col-m-9" required/></li>
+		<li class="col-mob-12"><label for="date"  class="col-mob-12 col-m-3">Date <span>(*):</span></label>
+			<input type="date" name="date" id="date" class="col-mob-12 col-m-9" required/></li>
+		<li class="col-mob-12"><label for="tel" class="col-mob-12 col-m-3">Téléphone <span>(*):</span></label>
+			<input type="tel" name="tel" id="tel" pattern="^\(?\d{3}\)?(-| )?\d{3}(-| )?\d{4}$" placeholder="000-000-0000"class="col-mob-12 col-m-9"></li>
+		<li class="col-mob-12"><label for="field" class="col-mob-12 col-m-3">Domaine :</label>
+			<input list="infoField" type="text" id="field" class="col-mob-12 col-m-9" >
+			<datalist id="infoField">
+				<option>Plumber</option>
+				<option>Dentist</option>
+			</datalist></li>
+		<li class="row" >
+			<p class="col-m-3" id="idP"><span>Expériencee :</span></p>
+
+			<ul class="col-m-9">
+				<li class="invente col-mob-12 col-m-3 col-2"><input type="radio" name="expirience" id="firsTime" value="1" />
+					<label for="firsTime">0-1</label></li>
+				<li class="invente col-mob-12 col-m-3 col-2"><input type="radio" name="expirience" id="secondTime" value="2"/>
+					<label for="secondTime">2-3</label></li>
+				<li class="invente col-mob-12 col-m-3 col-2"><input type="radio" name="expirience" id="thirdTime" value="3"/>
+					<label for="thirdTime">4-5</label></li>
+				<li class="invente col-mob-12 col-m-3 col-2"><input type="radio" name="expirience" id="fourthTime" value="4"/>
+					<label for="fourthTime">6-10</label></li>
+				<li class="invente col-mob-12 col-m-3 col-2"><input type="radio" name="expirience" id="fithTime" value="5"/>
+					<label for="fithTime">11-(+)</label></li>
+			</ul>
+		</li>
+
+		<li class="col-mob-12">
+			<p class="col-mob-3"><span>Ville:</span></p>
+			<select name="city" id="city">
+				<option value="montreal">Montréal</option>
+				<option value="quebec">Québec</option>
+				<option value="laval">Laval</option>
+			</select>
+		</li>
+		<li class="col-mob-12 col-m-12 col-12" ><label for="who" class="col-m-3">Comment arrivez-vous ici?</label>
+			<textarea name="who" id="who" class="col-mob-12 col-m-10 col-5"></textarea></li>
+		</ul>
+	<div class="col-mob-6 col-mob-10 col-10">
+		<input type="submit" class="go" value="Soumettre">
+	</div>
+
+	<div class="half row col-mob-10 col-10">
+		<p> Les Pros type de membre</p>
+		<div class="tab blue">
+			<input id="tab-four" type="radio" name="tabs2">
+			<label for="tab-four">Basic</label>
+			<div class="tab-content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+			</div>
+		</div>
+		<div class="tab blue">
+			<input id="tab-five" type="radio" name="tabs2">
+			<label for="tab-five">Préférentiel</label>
+			<div class="tab-content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+			</div>
+		</div>
+		<div class="tab blue">
+			<input id="tab-six" type="radio" name="tabs2">
+			<label for="tab-six">V.I.P.</label>
+			<div class="tab-content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+
+
+</form>
+</main>
+
+<footer class="row col-mob-10" id="footerForm ">
+
+	<div class="col-mob-12">
+
+	<p>Suivez nous</p>
+	<ul class="">
+
+		<li><a href="http://www.linkedin.com/"> <img src="images/logo/linkedin.png" alt="linkedin"/></a></li>
+		<li><a href="http://www.facebook.com/"><img src="images/logo/facebook.png" alt="face"/></a></li>
+		<li><a href="https://twitter.com/"> <img src="images/logo/twitter.png" alt="twitter"/></a></li>
+	</ul>
+	</div>
+	<div class="col-mob-12">
+
+	<p> À propo lesPro</p>
+	<ul class="">
+
+		<li><a href="index.html" class="navigation">About Us</a></li>
+		<li><a href="index.html" class="navigation">Contact Us</a></li>
+		<li><a href="terms.html" class="navigation">Terms and Conditions</a></li>
+	</ul>
+	</div>
+
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+    	<meta charset="utf-8">
+    	<title>Le titre du document</title>
+        <meta name="author" content="First Name Last Name">
+        <meta name="description" content="Short Description of the page contents for SEO purposes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/css-normalize/normalize.css">
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header>
+			<div class="row">
+				<img src="images/128.png" alt="logo">
+				<select id="langue">
+					<option>Français</option>
+					<option>Anglais</option>
+				</select>
+			</div>
+			<nav class="row">
+				<ul>
+					<li><a href="">Devenez un membre</a></li>
+					<li><a href="">Connexion</a></li>
+					<li><a href="">Motivation un site</a></li>
+				</ul>
+			</nav>
+			<form id="search-bars">
+				<h6>Par Catégorie:</h6>
+				<select class="bar">
+					<option>Dentiste</option>
+					<option>Psychologist</option>
+					<option>Chiropractor</option>
+				</select>
+				<h6>Recherchez:</h6>
+				<input list="professionals" class="bar bar-list">
+				<datalist id="professionals">
+					<option value="Dentiste">
+					<option value="Psychologist">
+					<option value="Chiropractor">
+				</datalist>
+				<input type="image" src="images/search-icon.png">
+			</form>
+		</header>
+		<main class="row col-11 col-m-11">
+			<div id="slider">
+				<!-- inputs radio que l'on va cacher -->
+				<input checked type="radio" name="slider" id="slide1">
+				<input type="radio" name="slider" id="slide2">
+				<input type="radio" name="slider" id="slide3">
+				<input type="radio" name="slider" id="slide4">
+				<input type="radio" name="slider" id="slide5">
+				<!-- le carousel -->
+				<div id="slides">
+					<!-- div qui va delimiter l'espace que verra l'utilisateur -->
+					<div id="overflow">
+						<!-- div qui contient les 5 photos avec leur texte respectif = 5 diapositives -->
+						<div class="inner ad-block">
+							<!-- START ADVERTISEMENT -->
+							<div class="advertisement blue" itemscope itemtype="http://schema.org/Person">
+								<div class="ad-left-part">
+									<h4 itemprop="name">Nom duPro</h4>
+									<img src="images/150x200.jpg" alt="">
+								</div>
+								<div class="ad-right-part">
+									<h4 itemprop="jobTitle">Occupation1</h4>
+									<p itemprop="description">A paragraph of text with an unassigned link. A second row of text with a web link.</p>
+									<div class="stars" itemscope itemtype="http://schema.org/AggregateRating">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<span itemprop="ratingValue">5</span>
+									</div>
+								</div>
+							</div>
+							<div class="advertisement red" itemscope itemtype="http://schema.org/Person">
+								<div class="ad-left-part">
+									<h4 itemprop="name">Nom duPro</h4>
+									<img src="images/150x200.jpg" alt="">
+								</div>
+								<div class="ad-right-part">
+									<h4 itemprop="jobTitle">Occupation2</h4>
+									<p itemprop="description">A paragraph of text with an unassigned link. A second row of text with a web link.</p>
+									<div class="stars" itemscope itemtype="http://schema.org/AggregateRating">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<span itemprop="ratingValue">5</span>
+									</div>
+								</div>
+							</div>
+							<div class="advertisement blue" itemscope itemtype="http://schema.org/Person">
+								<div class="ad-left-part">
+									<h4 itemprop="name">Nom duPro</h4>
+									<img src="images/150x200.jpg" alt="">
+								</div>
+								<div class="ad-right-part">
+									<h4 itemprop="jobTitle">Occupation3</h4>
+									<p itemprop="description">A paragraph of text with an unassigned link. A second row of text with a web link.</p>
+									<div class="stars" itemscope itemtype="http://schema.org/AggregateRating">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<span itemprop="ratingValue">5</span>
+									</div>
+								</div>
+							</div>
+							<div class="advertisement red" itemscope itemtype="http://schema.org/Person">
+								<div class="ad-left-part">
+									<h4 itemprop="name">Nom duPro</h4>
+									<img src="images/150x200.jpg" alt="">
+								</div>
+								<div class="ad-right-part">
+									<h4 itemprop="jobTitle">Occupation4</h4>
+									<p itemprop="description">A paragraph of text with an unassigned link. A second row of text with a web link.</p>
+									<div class="stars" itemscope itemtype="http://schema.org/AggregateRating">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<span itemprop="ratingValue">5</span>
+									</div>
+								</div>
+							</div>
+							<div class="advertisement blue" itemscope itemtype="http://schema.org/Person">
+								<div class="ad-left-part">
+									<h4 itemprop="name">Nom duPro</h4>
+									<img src="images/150x200.jpg" alt="">
+								</div>
+								<div class="ad-right-part">
+									<h4 itemprop="jobTitle">Occupation5</h4>
+									<p itemprop="description">A paragraph of text with an unassigned link. A second row of text with a web link.</p>
+									<div class="stars" itemscope itemtype="http://schema.org/AggregateRating">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<span itemprop="ratingValue">5</span>
+									</div>
+								</div>
+							</div>
+							<div class="advertisement red" itemscope itemtype="http://schema.org/Person">
+								<div class="ad-left-part">
+									<h4 itemprop="name">Nom duPro</h4>
+									<img src="images/150x200.jpg" alt="">
+								</div>
+								<div class="ad-right-part">
+									<h4 itemprop="jobTitle">Occupation6</h4>
+									<p itemprop="description">A paragraph of text with an unassigned link. A second row of text with a web link.</p>
+									<div class="stars" itemscope itemtype="http://schema.org/AggregateRating">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<img src="images/star.png" itemprop="image">
+										<span itemprop="ratingValue">5</span>
+									</div>
+								</div>
+							</div><!-- LAST ADVERTISEMENT -->
+						</div> <!-- END .inner -->
+					</div> <!-- END #overflow -->
+				</div> <!-- END #slides -->
+
+				<!-- div qui contient les labels associés aux input cachés => labels = boutons
+                          de control pour passer d'une diapositive à une autre  -->
+				<div id="active">
+					<label for="slide1"></label>
+					<label for="slide2"></label>
+					<label for="slide3"></label>
+					<label for="slide4"></label>
+				</div><!-- END #active -->
+			</div> <!-- END #slider -->
+			<h3>Nôtre mission:</h3>
+			<p>De facilité les transactions entre des gens honnête, et les professionelles qualifier et competant du Québec en donnant un espace publicitaire. </p>
+
+			<div class="row panel-container col-12">
+				<div class="panel">
+					<h2>Professionelle de la santé</h2>
+					<img src="images/200.png">
+					<ul class="pro-links">
+						<li itemscope itemtype="http://schema.org/jobTitle"><a href="#"><strong>Dentiste</strong></a></li>
+						<li><a href="#"><strong>Psychologue</strong></a></li>
+						<li><a href="#"><strong>Chiropracticien</strong></a></li>
+						<li><a href="#"><strong>Physiotherapeute</strong></a></li>
+						<li><a href="#"><strong>Masseuse</strong> (eur)</a></li>
+						<li><a href="#">etc...</a></li>
+					</ul>
+				</div>
+				<div class="panel">
+					<h2>Travailleur vocationel</h2>
+					<img src="images/200.png">
+					<ul class="pro-links">
+						<li><a href="#"><strong>Electrician</strong></a></li>
+						<li><a href="#"><strong>Plombier</strong></a></li>
+						<li><a href="#"><strong>Charpentier</strong></a></li>
+						<li><a href="#"><strong>Mecanicien</strong></a></li>
+						<li><a href="#"><strong>Peintre</strong></a></li>
+						<li><a href="#">etc...</a></li>
+					</ul>
+				</div>
+				</div>
+				<div class="row">
+					<h3>Nôtre mission:</h3>
+					<p>De facilité les transactions entre des gens honnête, et les professionelles qualifier et competant du Québec en donnant un espace publicitaire.</p>
+				</div>
+				<div class="row panel-container col-12">
+					<div class="panel">
+						<h2>Design</h2>
+						<img src="images/200.png">
+						<ul class="pro-links">
+							<li><a href="#"><strong>Femme de ménage</strong></a></li>
+							<li><a href="#"><strong>Organisateur de marriage</strong></a></li>
+							<li><a href="#">etc...</a></li>
+						</ul>
+					</div>
+					<div class="panel">
+						<h2>Autres</h2>
+						<img src="images/200.png">
+						<ul class="pro-links">
+							<li><a href="#"><strong>Femme de ménage</strong></a></li>
+							<li><a href="#"><strong>Organisateur de marriage</strong></a></li>
+							<li><a href="#">etc...</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<p>De facilité les transactions entre des gens honnête, et les professionelles qualifier et competant du Québec en donnant un espace publicitaire.</p>
+			</div>
+		</main>
+		<aside class="col-1 col-m-1">
+			<div>
+				<img src="images/150x200">
+				<img src="images/150x200">
+			</div>
+		</aside>
+		<footer class="arrow" id="footerForm">
+			<ul class="col-mob-6">
+				<li><a href="index.html" class="navigation">About Us</a></li>
+				<li><a href="index.html" class="navigation">Contact Us</a></li>
+				<li><a href="terms.html" class="navigation">Terms and Conditions</a></li>
+			</ul>
+			<ul class="col-mob-6">
+				<li><a href="http://www.linkedin.com/"> <img src="images/logo/linkedin.png" alt="linkedin"/></a></li>
+				<li><a href="http://www.facebook.com/"><img src="images/logo/facebook.png" alt="face"/></a></li>
+				<li><a href="https://twitter.com/"> <img src="images/logo/twitter.png" alt="twitter"/></a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
