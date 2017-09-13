@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+    	<meta charset="utf-8">
+    	<title>Les Pro</title>
+        <meta name="author" content="Les Pro" >
+        <meta name="description" content="a linkedin but different" >
+		<link rel="stylesheet" href="css/main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<![endif]-->
+		
+	</head>
+	<body id="bodyPayment">
+		<header>
+			<div id="divLogoPayment" class="row">
+				<a href="index.html" class="col-m-2"><img src="images/logo.png" alt="lespro" id="logoForm"></a>
+				<img src="images/lesPros.jpg" alt="lespro" id="banner" class="col-m-10"/>
+				
+				<nav id="navheader" class="col-m-12">
+					<ul>
+						<li><a href="index.html" class="navigation">Home</a></li>	
+						<li><a href="search.html" class="navigation">Search</a></li>
+						<li><a href="singin.html" class="navigation">Sing In</a></li>
+						<li><a href="payment.html" class="navigation">Buy Now</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="mobile-nav">
+				<!-- menu hamburger -->
+				<div class="menu-btn" id="menu-hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</header>
+		<form class="payWrapper row col-m-10">
+			<ul>
+				<li class="col-mob-12">
+					<p class="col-m-3"><span>Country :</span></p>
+					<select name="country" id="country" class=" col-mob-12 col-m-9"> 
+						<option value="Canada">Argentina</option> 
+						<option value="Canada">Canada</option> 
+						<option value="Us">United States of America</option> 
+						<option value="Cambodia">Cambodia</option> 
+					</select>
+				</li>
+				<li class="col-mob-12" >
+					<ul class="">
+						<li class="col-mob-6"><input type="radio" name="credit" id="credit" value="credit"/> 
+						<label for="credit">Credit</label></li> 
+						<li class="col-mob-6"><input type="radio" name="credit" id="debit" value="debit"/> 
+						<label for="debit">Debit</label></li>
+					</ul>
+				</li>
+				<li class="col-mob-12" ><label for="cardNumber" class="col-m-3">Credit Card N <span>(*):</span></label>
+				<input type="text" id="cardNumber" name="cardNumber" value="0" placeholder="000-0000-0000"  class="col-mob-12 col-m-5" required/></li>
+				<li class="">
+					<ul class="row">
+						<li class="col-mob-2"><input type="radio" name="creditCard" id="visa" value="visa" /> 
+						<label for="visa"><img src="images/visa.jpg" alt="lespro" id="visaImg" class=""/></label></li> 
+						<li class="col-mob-2"><input type="radio" name="creditCard" id="americanExpress" value="americanExpress"/> 
+						<label for="americanExpress"><img src="images/americanExpress.jpg" alt="lespro" id="americanExpressImg" class=""/></label></li>
+						<li class="col-mob-2"><input type="radio" name="creditCard" id="masterCard" value="masterCard"/> 
+						<label for="masterCard"><img src="images/masterCard.jpg" alt="lespro" id="masterCardImg" class=""/></label></li>
+						<li class="col-mob-2"><input type="radio" name="creditCard" id="discover" value="discover"/> 
+						<label for="discover"><img src="images/discover.jpg" alt="lespro" id="discoverImg" class=""/></label></li>
+						<li class="col-mob-2"><input type="radio" name="creditCard" id="payPal" value="payPal"/> 
+						<label for="payPal"><img src="images/payPal.jpg" alt="lespro" id="payPalImg" class=""/></label></li>
+					</ul>
+				</li>
+				
+				<li class="col-mob-12"><label for="date"  class="col-m-3">Exp. Date <span>(*):</span></label>
+				<input type="date" name="date" id="date" class="col-mob-12 col-m-9" required/></li>
+				<li class="col-mob-12" ><label for="cardCode" class="col-m-3">Code <span>(*):</span></label>
+				<input type="number" id="cardCode" value="" placeholder="000"  class="col-mob-12 col-m-9" required></li>
+				<li class="col-mob-12"><p>Billing Information</p></li>
+				<li class="col-mob-12" ><label for="name" class="col-m-3">Name <span>(*):</span></label>
+				<input type="text" id="name" value="name" placeholder="Name"  class="col-mob-12 col-m-3" required></li>
+				<li class="col-mob-12"><label for="lastName" class="col-m-3">Last Name <span>(*):</span></label>
+				<input type="text" id="lastName" value="lastName" placeholder="Last Name" class="col-mob-12 col-m-9" required></li>
+				<li class="col-mob-12"><label for="address" class="col-m-3">Address 1<span>(*):</span></label>
+				<input type="text" id="address" value="address" placeholder="address" class="col-mob-12 col-m-9" required></li>
+				<li class="col-mob-12"><label for="addressTwo" class="col-m-3">Address 2<span></span></label>
+				<input type="text" id="addressTwo" value="addressTwo" placeholder="address optional" class="col-mob-12 col-m-9"/></li>
+				
+				<li class="col-mob-12">
+					<p class="col-m-3"><span>City :</span></p>
+					<select name="city" id="city" class="col-m-4"> 
+						<option value="montreal">Montréal</option> 
+						<option value="quebec">Quebec</option> 
+						<option value="laval">Laval</option> 
+					</select>
+				</li>
+				
+				<li class="col-mob-12"><label for="zip" class="col-m-3">Zip Code<span>(*):</span></label>
+				<input type="text" id="zip" value="zip" placeholder="Zip Code" class="col-m-5"/></li>
+				
+				<li class="col-mob-12"><p>Contact Information</p></li>
+				
+				<li class="col-mob-12"><label for="email" class="col-m-3">Email <span>(*):</span></label>
+				<input type="email" name="email" id="email" placeholder="fulanito@detal.com" class="col-mob-12 col-m-9" ></li>
+				<li class="col-mob-12"><label for="tel" class="col-m-3">Phone <span>(*):</span></label>
+				<input type="tel" name="tel" id="tel" pattern="^\(?\d{3}\)?(-| )?\d{3}(-| )?\d{4}$" placeholder="000-000-0000" class="col-mob-12 col-m-9"></li>
+				
+			</ul>
+			<div class="col-mob-3 col-mob-6">
+				<input type="submit" class="" value="PAL PAY BACK!">
+			</div>
+		</form>
+		<footer class="arrow" id="footerPayment">
+			<ul class="col-mob-6">
+				<li><a href="index.html" class="navigation">About Us</a></li>	
+				<li><a href="index.html" class="navigation">Contact Us</a></li>
+				<li><a href="terms.html" class="navigation">Terms and Conditions</a></li>
+			</ul>
+			<ul class="col-mob-6">
+				<li class="col-mob-4 col-m-12"><a href="http://www.linkedin.com/"> <img src="images/linkedin.png" alt="linkedin"/></a></li>
+				<li class="col-mob-4 col-m-12"><a href="http://www.facebook.com/"><img src="images/facebook.png" alt="face"/></a></li>
+				<li class="col-mob-4 col-m-12"><a href="https://twitter.com/"> <img src="images/twitter.png" alt="twitter"/></a></li>
+			</ul>
+		</footer>
+	</body>
+</html>

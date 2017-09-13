@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css-normalize/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script src="script/main.js" type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgz-96Rt-Khgw-EIuUqiVYqqQbOQzAeq4&callback=myMap"></script>
+</head>
+    <body>
+    <header>
+        <div class="row">
+            <img src="images/128.png" alt="logo">
+            <select id="langue">
+                <option>Français</option>
+                <option>Anglais</option>
+            </select>
+        </div>
+        <nav class="row">
+            <ul>
+                <li><a href="">Devenez un membre</a></li>
+                <li><a href="">Connexion</a></li>
+                <li><a href="">Motivation un site</a></li>
+            </ul>
+        </nav>
+        <form id="search-bars">
+            <h6>Par Catégorie:</h6>
+            <select class="bar">
+                <option>Dentiste</option>
+                <option>Psychologist</option>
+                <option>Chiropractor</option>
+            </select>
+            <h6>Recherchez:</h6>
+            <input list="professionals" class="bar bar-list">
+            <datalist id="professionals">
+                <option value="Dentiste">
+                <option value="Psychologist">
+                <option value="Chiropractor">
+            </datalist>
+            <input type="image" src="images/search-icon.png">
+        </form>
+    </header>
+    <main class="row col-11 col-m-11">
+        <div class="row ad-block">
+            <div class="col-8 col-m-8">
+                <div class="advertisement blue" itemscope itemtype="http://schema.org/Person">
+                    <div class="ad-left-part">
+                        <h4 itemprop="name">Nom duPro</h4>
+                        <img src="images/150x200.jpg" alt="">
+                    </div>
+                    <div class="ad-right-part">
+                        <h4 itemprop="jobTitle">Occupation1</h4>
+                        <p itemprop="description">A paragraph of text with an unassigned link. A second row of text with a web link.</p>
+                        <div class="stars" itemscope itemtype="http://schema.org/AggregateRating">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <span itemprop="ratingValue">5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="commentary">
+                    <span>Dernier commentaire:</span>
+                    <p>A paragraph of text with an unassigned link. A second row of text with a web link. A paragraph of text with an unassigned link. A second row of text with a web link. A paragraph of text with an unassigned link.</p>
+                </div>
+            </div>
+            <div id="map1" class="map"></div>
+        </div>
+        <div class="row ad-block">
+            <div class="col-8 col-m-8">
+                <div class="advertisement red" itemscope itemtype="http://schema.org/Person">
+                    <div class="ad-left-part">
+                        <h4 itemprop="name">Nom duPro</h4>
+                        <img src="images/150x200.jpg" alt="">
+                    </div>
+                    <div class="ad-right-part">
+                        <h4 itemprop="jobTitle">Occupation2</h4>
+                        <p itemprop="description">A paragraph of text with an unassigned link. A second row of text with a web link.</p>
+                        <div class="stars" itemscope itemtype="http://schema.org/AggregateRating">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <span itemprop="ratingValue">5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="commentary">
+                    <span>Dernier commentaire:</span>
+                    <p>A paragraph of text with an unassigned link. A second row of text with a web link. A paragraph of text with an unassigned link. A second row of text with a web link. A paragraph of text with an unassigned link.</p>
+                </div>
+            </div>
+            <div id="map2" class="map"></div>
+        </div>
+        <div class="row ad-block">
+            <div class="col-8 col-m-8">
+                <div class="advertisement blue" itemscope itemtype="http://schema.org/Person">
+                    <div class="ad-left-part">
+                        <h4 itemprop="name">Nom duPro</h4>
+                        <img src="images/150x200.jpg" alt="">
+                    </div>
+                    <div class="ad-right-part">
+                        <h4 itemprop="jobTitle">Occupation3</h4>
+                        <p itemprop="description">A paragraph of text with an unassigned link. A second row of text with a web link.</p>
+                        <div class="stars" itemscope itemtype="http://schema.org/AggregateRating">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <span itemprop="ratingValue">5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="commentary">
+                    <span>Dernier commentaire:</span>
+                    <p>A paragraph of text with an unassigned link. A second row of text with a web link. A paragraph of text with an unassigned link. A second row of text with a web link. A paragraph of text with an unassigned link.</p>
+                </div>
+            </div>
+            <div id="map3" class="map"></div>
+        </div>
+        <div class="row ad-block">
+            <div class="col-8 col-m-8">
+                <div class="advertisement red" itemscope itemtype="http://schema.org/Person">
+                    <div class="ad-left-part">
+                        <h4 itemprop="name">Nom duPro</h4>
+                        <img src="images/150x200.jpg" alt="">
+                    </div>
+                    <div class="ad-right-part">
+                        <h4 itemprop="jobTitle">Occupation4</h4>
+                        <p itemprop="description">A paragraph of text with an unassigned link. A second row of text with a web link.</p>
+                        <div class="stars" itemscope itemtype="http://schema.org/AggregateRating">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <span itemprop="ratingValue">5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="commentary">
+                    <span>Dernier commentaire:</span>
+                    <p>A paragraph of text with an unassigned link. A second row of text with a web link. A paragraph of text with an unassigned link. A second row of text with a web link. A paragraph of text with an unassigned link.</p>
+                </div>
+            </div>
+            <div id="map4" class="map"></div>
+        </div>
+        <div class="row ad-block">
+            <div class="col-8 col-m-8">
+                <div class="advertisement blue" itemscope itemtype="http://schema.org/Person">
+                    <div class="ad-left-part">
+                        <h4 itemprop="name">Nom duPro</h4>
+                        <img src="images/150x200.jpg" alt="">
+                    </div>
+                    <div class="ad-right-part">
+                        <h4 itemprop="jobTitle">Occupation5</h4>
+                        <p itemprop="description">A paragraph of text with an unassigned link. A second row of text with a web link.</p>
+                        <div class="stars" itemscope itemtype="http://schema.org/AggregateRating">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <span itemprop="ratingValue">5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="commentary">
+                    <span>Dernier commentaire:</span>
+                    <p>A paragraph of text with an unassigned link. A second row of text with a web link. A paragraph of text with an unassigned link. A second row of text with a web link. A paragraph of text with an unassigned link.</p>
+                </div>
+            </div>
+            <div id="map5" class="map"></div>
+        </div>
+        <div class="row ad-block">
+            <div class="col-8 col-m-8">
+                <div class="advertisement red" itemscope itemtype="http://schema.org/Person">
+                    <div class="ad-left-part">
+                        <h4 itemprop="name">Nom duPro</h4>
+                        <img src="images/150x200.jpg" alt="">
+                    </div>
+                    <div class="ad-right-part">
+                        <h4 itemprop="jobTitle">Occupation6</h4>
+                        <p itemprop="description">A paragraph of text with an unassigned link. A second row of text with a web link.</p>
+                        <div class="stars" itemscope itemtype="http://schema.org/AggregateRating">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <img src="images/star.png" itemprop="image">
+                            <span itemprop="ratingValue">5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="commentary">
+                    <span>Dernier commentaire:</span>
+                    <p>A paragraph of text with an unassigned link. A second row of text with a web link. A paragraph of text with an unassigned link. A second row of text with a web link. A paragraph of text with an unassigned link.</p>
+                </div>
+            </div>
+            <div id="map6" class="map"></div>
+        </div>
+    </main>
+    <aside class="col-1 col-m-1">
+        <div>
+            <img src="images/150x200">
+            <img src="images/150x200">
+        </div>
+    </aside>
+    </body>
+</html>

@@ -1,0 +1,558 @@
+﻿// ---- COLORS
+$main-color : #f49a02;
+$nav-color: #fff;
+$footer-color-1: #68420a;
+$footer-color-2: #d12600;
+
+// ---- WIDTH AND MARGINS
+$advertisement-width: 282px;
+$advertisement-margin: 0.15rem;
+$advertisement-stars-width: 150px;
+$panel-width: 416px;
+
+/***** START FLEX METHODS *****/
+@mixin flex() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex-wrap() {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+@mixin justify-content($position) {
+    -webkit-box-pack: $position;
+    -ms-flex-pack: $position;
+    justify-content: $position;
+}
+/***** END FLEX METHODS *****/
+
+/***** START TRANSITIION *****/
+@mixin transition($property, $duration, $timing-function) {
+    -webkit-transition: $property, $duration, $timing-function;
+    -o-transition: $property, $duration, $timing-function;
+    transition: $property, $duration, $timing-function;
+}
+/***** END TRANSITIION *****/
+
+  *{
+    padding: 0;
+    margin:	0;
+    outline: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+  }
+
+  main {float: left}
+
+  ul {
+    list-style-type: none;
+  }
+
+  //img {
+  //  max-width:100%;
+  //}
+
+  article, aside, details, figcaption, figure, footer, header, main, nav, section {display: block; }
+
+  /******************* TEST CSS using COLORS *******************/
+  .blue {background-color: blue;}
+  .red {background-color: red; }
+  .panel {background-color:purple;}
+  aside {background-color: red;  }
+
+  /******  START FORM CSS   ******/
+  /**************************************NAV************************************************************************************/
+  .menu-nav {
+    display: none;
+  }
+
+  /***** CHANGES *****/
+  #logoForm {
+    width:50px;
+    height:50px;
+  }
+
+  .mobile-nav {
+    margin: 2% 0 2% 0;
+    background-color:orange;
+    padding:2%;
+    border-radius: 5px;
+  }
+
+  .menu-btn span {
+    width: 50px;
+    height:3px;
+    display:block;
+    background-color:white;
+    margin:8px;
+  }
+
+  /***** TESTING *****/
+
+  /*margin among lines*/
+  //.wrapper {
+  //  & > ul {
+  //    & > li {
+  //      label, p, span { font-weight:bold; }
+  //
+  //      & > ul > li {
+  //        margin: 2% 0 2% 0;
+  //      }
+  //    }
+  //  }
+  //}
+  //
+  //.formWrapper > h1 {
+  //  margin: 2% 0 2% 0;
+  //}
+
+/***** END TESTING *****/
+
+/*margin among lines*/
+.formWrapper > ul > li,
+.formWrapper > h1,
+.payWrapper > ul > li,
+.payWrapper > ul > li > ul > li {
+  margin: 2% 0 2% 0;
+}
+
+.formWrapper > ul > li > label,
+.formWrapper > ul > li > p,
+.formWrapper > ul > li > span,
+.payWrapper > ul > li {
+  font-weight:bold;
+}
+
+/*********PAYMENT**********/
+  .payWrapper {
+    img{
+      width: 25px;
+      height:25px;
+    }
+
+    & > ul > li > p:last-child {
+      font-size:1.2rem;
+    }
+  }
+
+  footer ul:first-child {
+    list-style-type: disc;
+  }
+  /****** END FORM CSS   ******/
+
+  /******  START HEADER   ******/
+  #langue {
+    float:right;
+  }
+
+  nav {
+    background-color: $main-color;
+    width: 95%;
+    margin: 0 auto;
+    padding: 1rem;
+
+    li {
+      display: inline-block;
+      width: 20%;
+    }
+  }
+
+  #search-bars {
+    margin-left: 2rem;
+
+    .bar {
+      width: 80%;
+      height:35px;
+      margin-top:10px;
+    }
+
+    .bar-list {
+      position: relative;
+      left:30px;
+      bottom:15px;
+    }
+  }
+
+  #search-bars > input[type="image"] {
+    position: absolute;
+  }
+  /******  END HEADER   ******/
+
+  /*---------- ***** START CAROUSEL ***** ----------*/
+  #overflow {
+    overflow: hidden; /*permet de cacher les 4 autres diapositives qui dépassent*/
+    width: calc(#{$advertisement-width} + (2 * #{$advertisement-margin}));
+    margin: auto;
+  }
+
+  #slider {
+    /*On cache les inputs*/
+    input[type="radio"] {
+      display: none;
+    }
+
+    #slides {
+      margin: 1rem 0px;
+
+      /*La div inner a la somme des largeurs des 5 diapositives (500%).*/
+      .inner {
+        width: 1920px;
+        margin: 0 auto;
+
+        /* Transition sur div .inner pour défiler les diapositives en une seconde*/
+        @include transition(margin-left, 1s, ease-in-out);
+      }
+    }
+
+    #slide1:checked ~ #slides .inner {
+      margin-left: 0;
+    }
+
+    #slide2:checked ~ #slides .inner {
+      margin-left: calc(-1 * (#{$advertisement-width} + (2 * #{$advertisement-margin})));
+    }
+
+    #slide3:checked ~ #slides .inner {
+      margin-left: calc(-1 * ((#{$advertisement-width} * 2) + (4 * #{$advertisement-margin})));
+    }
+
+    #slide4:checked ~ #slides .inner {
+      margin-left: calc(-1 * ((#{$advertisement-width} * 3) + (6 * #{$advertisement-margin})));
+    }
+
+    #active {
+      text-align:center; /*pour centrer les labels*/;
+
+      /*On styles les labels pour qu'ils soient ronds, rouges et centrés*/
+      label {
+        width:10px;
+        height:10px;
+        border-radius:5px;
+        background-color:red;
+        display:inline-block; /*pour les aligner et pour qu'ils prennent la width et la height appliquées*/
+      }
+    }
+  }
+
+  .ad-block {
+    @include flex();
+
+    /* MOBILE INDEX Advertisement */
+    .advertisement {
+      position: relative;
+      margin: 0 $advertisement-margin;
+      width: $advertisement-width;
+      @include flex();
+
+      .ad-left-part img {
+        display: block;
+      }
+
+      .ad-right-part {
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+
+        h4 {
+          margin-bottom: 1rem;
+        }
+
+        p {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .stars {
+        width: $advertisement-stars-width;
+        border: 1px solid black;
+        padding: 0.2rem;
+        vertical-align: bottom;
+      }
+    }
+
+    .map {
+      width: 300px;
+      height: 200px;
+      background: yellow;
+    }
+  }
+
+  .commentary {
+    margin-top: 1rem;
+  }
+
+  /* END MOBILE INDEX Advertisement */
+
+  /*---------- ***** END CAROUSEL ***** ----------*/
+  .panel-container {
+    @include flex();
+    @include flex-wrap();
+    @include justify-content(center);
+
+    .panel {
+      margin: 0.5rem;
+      border: 1px solid black;
+      width: $panel-width;
+
+        img {
+          vertical-align: bottom;
+        }
+
+        .pro-links {
+            display: inline-block;
+            vertical-align: top;
+
+            a {
+              display: block;
+              margin: 1rem 0;
+            }
+        }
+    }
+  }
+
+  aside {
+    float:left;
+    margin-top:50px;
+    height:800px;
+  }
+
+  /***** START FOOTER *****/
+  footer {
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  #footerForm > ul + ul > li {
+      text-align: center;
+  }
+
+    #footerPayment > ul + ul {
+        display: flex;
+    }
+    /***** END FOOTER *****/
+
+    /****** START STYLE GRID ******/
+    //[class*="col-"] {
+    //  width: 100%;
+    //  float: left;
+    //}
+
+    [class^="col-"]{
+      float:left;
+      padding:0 15px;
+    }
+
+    .row:after {
+      content: ""; /*on crée un espace vide*/
+      clear: both; /*on annule l'effet de float*/
+      display: block; /*cela permet d'avoir un retour à la ligne*/
+    }
+
+    @for $i from 1 through 12 {
+      $width: percentage($i/12);
+
+      .col-mob-#{$i} { width: $width; }
+    }
+
+    /*.col-mob-1 {width: 8.33%;}
+    .col-mob-2 {width: 16.66%;}
+    .col-mob-3 {width: 25%;}
+    .col-mob-4 {width: 33.33%;}
+    .col-mob-5 {width: 41.66%;}
+    .col-mob-6 {width: 50%;}
+    .col-mob-7 {width: 58.33%;}
+    .col-mob-8 {width: 66.66%;}
+    .col-mob-9 {width: 75%;}
+    .col-mob-10 {width: 83.33%;}
+    .col-mob-11 {width: 91.66%;}
+    .col-mob-12 {width: 100%;} */
+
+    /****** END STYLE GRID ******/
+
+    /****** START STYLES TABLETTE *****/
+    @media only screen and (min-width:640px){
+      #overflow{
+        width: calc((#{$advertisement-width} * 2) + (4 *  #{$advertisement-margin}));
+      }
+
+      /***** GEORGE *****/
+
+      /********NAV*******************/
+      #divLogoForm,
+      .payWrapper {
+        margin:auto;
+      }
+
+      /*hide mobile bar*/
+      .mobile-nav {
+        display:none;
+      }
+
+      /**PAYMENT**********/
+      #divLogoPayment > img {
+        display:inline-block;
+      }
+
+      /*show tablet menu*/
+      #navheader {
+        display:block;
+        margin: 2% 0 2% 0;
+        border:solid;
+
+        #navheader > ul {
+          display:flex;
+          justify-content:space-around;
+
+          & li > a {
+            text-decoration:none;
+          }
+        }
+      }
+
+      #divLogoForm > form {
+        position:absolute;
+        margin: 2% 0 2% 15%;
+      }
+
+      /*****Form*****/
+      .formWrapper > ul > li:nth-child(12) {
+        text-align:center;
+      }
+
+      /**PAYMENT**********/
+      .payWrapper {
+        & > ul > li > ul {
+          margin-left:25%;
+          list-style-type: none;
+        }
+
+        & > div > input {
+          margin:2% 0 2% 50%;
+          height:30px;
+        }
+
+        & > ul > li > p:last-child {
+          font-size:1.2rem;
+        }
+      }
+
+      /****Footer*******/
+      #footerPayment {
+        & > ul + ul {
+          display: block;
+        }
+
+        & > ul + ul > li {
+          text-align:center;
+        }
+      }
+
+      /*END GEORGE*/
+
+      footer {
+        ul {
+          border-top:solid;
+        }
+
+        ul + ul {
+          border-left:solid;
+        }
+
+        & > ul:nth-child(1) > li > a {
+          text-decoration:none;
+        }
+      }
+
+      @for $i from 1 through 12 {
+        $width: percentage($i/12);
+
+        .col-m-#{$i} { width: $width; }
+      }
+
+      /*.col-m-1 {width: 8.33%;}
+      .col-m-2 {width: 16.66%;}
+      .col-m-3 {width: 25%;}
+      .col-m-4 {width: 33.33%;}
+      .col-m-5 {width: 41.66%;}
+      .col-m-6 {width: 50%;}
+      .col-m-7 {width: 58.33%;}
+      .col-m-8 {width: 66.66%;}
+      .col-m-9 {width: 75%;}
+      .col-m-10 {width: 83.33%;}
+      .col-m-11 {width: 91.66%;}
+      .col-m-12 {width: 100%;} */
+
+    }/****** END STYLES TABLETTE  ****** /
+
+  /****** START STYLES DESKTOP ******/
+    @media only screen and (min-width:960px){
+      #overflow {
+        width: calc((#{$advertisement-width} * 3) + (6 * #{$advertisement-margin}));
+      }
+
+      /*******NAV*********/
+      #divLogoForm > form{
+        display:none;
+        position:relative;
+      }
+
+      #divLogoForm > a > img{
+        display:inline-block;
+      }
+
+      #navheader{
+        font-size:1.5rem;
+      }
+
+      /********FORM FOR DESKTOP **********/
+      #navheader,
+      .formWrapper > ul > li > label,
+      .formWrapper > ul > li > p,
+      .formWrapper > ul > li > span,
+      .formWrapper h1 {
+        font-size:1.5rem;
+      }
+
+      .formWrapper > ul > li input{
+        height: 25px;
+      }
+
+      .formWrapper > ul > li > label,
+      .formWrapper > ul > li > p {
+        text-align: right;
+      }
+
+      .formWrapper h1{
+        text-align: center;
+      }
+
+      /*******FOOTER************/
+      #footerForm {
+        font-size:1.2rem;
+      }
+
+      @for $i from 1 through 12 {
+        $width: percentage($i/12);
+
+        .col-#{$i} { width: $width; }
+      }
+
+      /*.col-1 {width: 8.33%;}
+      .col-2 {width: 16.66%;}
+      .col-3 {width: 25%;}
+      .col-4 {width: 33.33%;}
+      .col-5 {width: 41.66%;}
+      .col-6 {width: 50%;}
+      .col-7 {width: 58.33%;}
+      .col-8 {width: 66.66%;}
+      .col-9 {width: 75%;}
+      .col-10 {width: 83.33%;}
+      .col-11 {width: 91.66%;}
+      .col-12 {width: 100%;}*/
+  }
+/****** END STYLES DESKTOP ******/
