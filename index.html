@@ -14,20 +14,43 @@
 	</head>
 	<body>
 		<header>
-			<div class="row">
-				<img src="images/128.png" alt="logo">
-				<select id="langue">
-					<option>Français</option>
-					<option>Anglais</option>
-				</select>
+			<div class="row header-top col-12">
+				<div class="col-1">
+					<img id="h-logo" src="images/logo/logo.png" alt="logo">
+				</div>
+				<div class="col-9">
+				<img id="h-banner" src="images/logo/banner.jpg">
+				</div>
+				<div class="col-2">
+					<select id="h-langue">
+						<option>Français</option>
+						<option>Anglais</option>
+					</select>
+				</div>
 			</div>
 			<nav class="row">
-				<ul>
-					<li><a href="">Devenez un membre</a></li>
-					<li><a href="">Connexion</a></li>
-					<li><a href="">Motivation un site</a></li>
+				<ul id="nav-menu">
+					<li>
+						<form>
+							<ul id="h-login">
+								<li>
+									<input type="email" name="email" placeholder="email@email.com" required>
+								</li>
+								<li>
+									<input type="password" name="password" placeholder="password" required/>
+								</li>
+								<li>
+									<input type="submit" value="Connexion">
+								</li>
+							</ul>
+						</form>
+					</li>
+					<li><a href="formulaire.html">Devenez un membre</a></li>
+					<li><img src="images/logo/cart-icon.png">0</li>
 				</ul>
 			</nav>
+		</header>
+		<main class="row col-11 col-m-11">
 			<form id="search-bars">
 				<h6>Par Catégorie:</h6>
 				<select class="bar">
@@ -44,8 +67,6 @@
 				</datalist>
 				<input type="image" src="images/search-icon.png">
 			</form>
-		</header>
-		<main class="row col-11 col-m-11">
 			<div id="slider">
 				<!-- inputs radio que l'on va cacher -->
 				<input checked type="radio" name="slider" id="slide1">
@@ -171,7 +192,6 @@
 						</div> <!-- END .inner -->
 					</div> <!-- END #overflow -->
 				</div> <!-- END #slides -->
-
 				<!-- div qui contient les labels associés aux input cachés => labels = boutons
                           de control pour passer d'une diapositive à une autre  -->
 				<div id="active">
@@ -181,9 +201,10 @@
 					<label for="slide4"></label>
 				</div><!-- END #active -->
 			</div> <!-- END #slider -->
-			<h3>Nôtre mission:</h3>
-			<p>De facilité les transactions entre des gens honnête, et les professionelles qualifier et competant du Québec en donnant un espace publicitaire. </p>
-
+			<div class="text">
+				<h3>Nôtre mission:</h3>
+				<p>De facilité les transactions entre des gens honnête, et les professionelles qualifier et competant du Québec en donnant un espace publicitaire. </p>
+			</div>
 			<div class="row panel-container col-12">
 				<div class="panel">
 					<h2>Professionelle de la santé</h2>
@@ -209,33 +230,32 @@
 						<li><a href="#">etc...</a></li>
 					</ul>
 				</div>
+			</div>
+			<div class="text">
+				<h3>Nôtre mission:</h3>
+				<p class="col-8">De facilité les transactions entre des gens honnête, et les professionelles qualifier et competant du Québec en donnant un espace publicitaire.</p>
+			</div>
+			<div class="row panel-container col-12">
+				<div class="panel">
+					<h2>Design</h2>
+					<img src="images/200.png">
+					<ul class="pro-links">
+						<li><a href="#"><strong>Femme de ménage</strong></a></li>
+						<li><a href="#"><strong>Organisateur de marriage</strong></a></li>
+						<li><a href="#">etc...</a></li>
+					</ul>
 				</div>
-				<div class="row">
-					<h3>Nôtre mission:</h3>
-					<p>De facilité les transactions entre des gens honnête, et les professionelles qualifier et competant du Québec en donnant un espace publicitaire.</p>
-				</div>
-				<div class="row panel-container col-12">
-					<div class="panel">
-						<h2>Design</h2>
-						<img src="images/200.png">
-						<ul class="pro-links">
-							<li><a href="#"><strong>Femme de ménage</strong></a></li>
-							<li><a href="#"><strong>Organisateur de marriage</strong></a></li>
-							<li><a href="#">etc...</a></li>
-						</ul>
-					</div>
-					<div class="panel">
-						<h2>Autres</h2>
-						<img src="images/200.png">
-						<ul class="pro-links">
-							<li><a href="#"><strong>Femme de ménage</strong></a></li>
-							<li><a href="#"><strong>Organisateur de marriage</strong></a></li>
-							<li><a href="#">etc...</a></li>
-						</ul>
-					</div>
+				<div class="panel">
+					<h2>Autres</h2>
+					<img src="images/200.png">
+					<ul class="pro-links">
+						<li><a href="#"><strong>Femme de ménage</strong></a></li>
+						<li><a href="#"><strong>Organisateur de marriage</strong></a></li>
+						<li><a href="#">etc...</a></li>
+					</ul>
 				</div>
 			</div>
-			<div class="row">
+			<div class="text">
 				<p>De facilité les transactions entre des gens honnête, et les professionelles qualifier et competant du Québec en donnant un espace publicitaire.</p>
 			</div>
 		</main>

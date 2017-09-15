@@ -3,6 +3,7 @@
 /***** END FLEX METHODS *****/
 /***** START TRANSITIION *****/
 /***** END TRANSITIION *****/
+/* line 50, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 * {
   padding: 0;
   margin: 0;
@@ -11,47 +12,137 @@
   box-sizing: border-box;
 }
 
+/* line 58, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 main {
   float: left;
 }
 
+/* line 62, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 ul {
   list-style-type: none;
 }
 
+/* line 66, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+header {
+  margin-bottom: 50px;
+}
+
+/* line 70, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 article, aside, details, figcaption, figure, footer, header, main, nav, section {
   display: block;
 }
 
 /******************* TEST CSS using COLORS *******************/
+/* line 73, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .blue {
   background-color: blue;
 }
 
+/* line 74, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .red {
   background-color: red;
 }
 
+/* line 75, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .panel {
   background-color: purple;
 }
 
+/* line 76, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 aside {
   background-color: red;
 }
 
+/******  START HEADER   ******/
+/* line 79, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+.header-top {
+  display: inline-block;
+  position: relative;
+  right: 0px;
+}
+
+/* line 84, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+.header-top #h-logo {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 89, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+.header-top #h-banner {
+  display: block;
+  left: 0px;
+}
+
+/* line 100, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+header nav {
+  background-color: #f49a02;
+  float: right;
+  width: 80%;
+  padding: 0.5rem;
+}
+
+/* line 106, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+header nav #nav-menu {
+  display: flex;
+  width: 100%;
+  height: 40px;
+}
+
+/* line 111, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+header nav #nav-menu li {
+  margin: auto 5px;
+}
+
+/* line 115, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+header nav #nav-menu #h-login {
+  display: flex;
+}
+
+/* line 119, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+header nav #nav-menu #h-login li input {
+  width: 150px;
+}
+
+/* line 126, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+header #search-bars {
+  margin-left: 2rem;
+}
+
+/* line 129, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+header #search-bars .bar {
+  width: 80%;
+  height: 35px;
+  margin-top: 10px;
+}
+
+/* line 135, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+header #search-bars .bar-list {
+  position: relative;
+  left: 30px;
+  bottom: 15px;
+}
+
+/* line 141, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+header #search-bars > input[type="image"] {
+  position: absolute;
+}
+
+/******  END HEADER   ******/
 /******  START FORM CSS   ******/
 /**************************************NAV************************************************************************************/
+/* line 151, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .menu-nav {
   display: none;
 }
 
 /***** CHANGES *****/
+/* line 156, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 #logoForm {
   width: 50px;
   height: 50px;
 }
 
+/* line 161, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .mobile-nav {
   margin: 2% 0 2% 0;
   background-color: orange;
@@ -59,6 +150,7 @@ aside {
   border-radius: 5px;
 }
 
+/* line 168, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .menu-btn span {
   width: 50px;
   height: 3px;
@@ -71,6 +163,7 @@ aside {
 /*margin among lines*/
 /***** END TESTING *****/
 /*margin among lines*/
+/* line 198, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .formWrapper > ul > li,
 .formWrapper > h1,
 .payWrapper > ul > li,
@@ -78,6 +171,7 @@ aside {
   margin: 2% 0 2% 0;
 }
 
+/* line 205, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .formWrapper > ul > li > label,
 .formWrapper > ul > li > p,
 .formWrapper > ul > li > span,
@@ -86,59 +180,25 @@ aside {
 }
 
 /*********PAYMENT**********/
+/* line 214, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .payWrapper img {
   width: 25px;
   height: 25px;
 }
 
+/* line 219, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .payWrapper > ul > li > p:last-child {
   font-size: 1.2rem;
 }
 
+/* line 224, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 footer ul:first-child {
   list-style-type: disc;
 }
 
 /****** END FORM CSS   ******/
-/******  START HEADER   ******/
-#langue {
-  float: right;
-}
-
-nav {
-  background-color: #f49a02;
-  width: 95%;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-nav li {
-  display: inline-block;
-  width: 20%;
-}
-
-#search-bars {
-  margin-left: 2rem;
-}
-
-#search-bars .bar {
-  width: 80%;
-  height: 35px;
-  margin-top: 10px;
-}
-
-#search-bars .bar-list {
-  position: relative;
-  left: 30px;
-  bottom: 15px;
-}
-
-#search-bars > input[type="image"] {
-  position: absolute;
-}
-
-/******  END HEADER   ******/
 /*---------- ***** START CAROUSEL ***** ----------*/
+/* line 230, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 #overflow {
   overflow: hidden;
   /*permet de cacher les 4 autres diapositives qui dépassent*/
@@ -146,19 +206,23 @@ nav li {
   margin: auto;
 }
 
+/* line 236, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 #slider {
   /*On cache les inputs*/
 }
 
+/* line 238, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 #slider input[type="radio"] {
   display: none;
 }
 
+/* line 242, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 #slider #slides {
   margin: 1rem 0px;
   /*La div inner a la somme des largeurs des 5 diapositives (500%).*/
 }
 
+/* line 246, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 #slider #slides .inner {
   width: 1920px;
   margin: 0 auto;
@@ -168,28 +232,34 @@ nav li {
   transition: margin-left, 1s, ease-in-out;
 }
 
+/* line 255, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 #slider #slide1:checked ~ #slides .inner {
   margin-left: 0;
 }
 
+/* line 259, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 #slider #slide2:checked ~ #slides .inner {
   margin-left: calc(-1 * (282px + (2 * 0.15rem)));
 }
 
+/* line 263, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 #slider #slide3:checked ~ #slides .inner {
   margin-left: calc(-1 * ((282px * 2) + (4 * 0.15rem)));
 }
 
+/* line 267, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 #slider #slide4:checked ~ #slides .inner {
   margin-left: calc(-1 * ((282px * 3) + (6 * 0.15rem)));
 }
 
+/* line 271, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 #slider #active {
   text-align: center;
   /*pour centrer les labels*/
   /*On styles les labels pour qu'ils soient ronds, rouges et centrés*/
 }
 
+/* line 275, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 #slider #active label {
   width: 10px;
   height: 10px;
@@ -199,6 +269,7 @@ nav li {
   /*pour les aligner et pour qu'ils prennent la width et la height appliquées*/
 }
 
+/* line 285, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .ad-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -206,6 +277,7 @@ nav li {
   /* MOBILE INDEX Advertisement */
 }
 
+/* line 289, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .ad-block .advertisement {
   position: relative;
   margin: 0 0.15rem;
@@ -215,24 +287,29 @@ nav li {
   display: flex;
 }
 
+/* line 295, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .ad-block .advertisement .ad-left-part img {
   display: block;
 }
 
+/* line 299, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .ad-block .advertisement .ad-right-part {
   margin-top: 0.5rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
 
+/* line 304, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .ad-block .advertisement .ad-right-part h4 {
   margin-bottom: 1rem;
 }
 
+/* line 308, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .ad-block .advertisement .ad-right-part p {
   margin-bottom: 1.5rem;
 }
 
+/* line 313, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .ad-block .advertisement .stars {
   width: 150px;
   border: 1px solid black;
@@ -240,18 +317,21 @@ nav li {
   vertical-align: bottom;
 }
 
+/* line 321, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .ad-block .map {
   width: 300px;
   height: 200px;
   background: yellow;
 }
 
+/* line 328, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .commentary {
   margin-top: 1rem;
 }
 
 /* END MOBILE INDEX Advertisement */
 /*---------- ***** END CAROUSEL ***** ----------*/
+/* line 334, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .panel-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -263,26 +343,31 @@ nav li {
   justify-content: center;
 }
 
+/* line 339, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .panel-container .panel {
   margin: 0.5rem;
   border: 1px solid black;
   width: 416px;
 }
 
+/* line 344, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .panel-container .panel img {
   vertical-align: bottom;
 }
 
+/* line 348, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .panel-container .panel .pro-links {
   display: inline-block;
   vertical-align: top;
 }
 
+/* line 352, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .panel-container .panel .pro-links a {
   display: block;
   margin: 1rem 0;
 }
 
+/* line 360, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 aside {
   float: left;
   margin-top: 50px;
@@ -290,26 +375,31 @@ aside {
 }
 
 /***** START FOOTER *****/
+/* line 368, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 footer img {
   width: 30px;
   height: 30px;
 }
 
+/* line 374, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 #footerForm > ul + ul > li {
   text-align: center;
 }
 
+/* line 378, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 #footerPayment > ul + ul {
   display: flex;
 }
 
 /***** END FOOTER *****/
 /****** START STYLE GRID ******/
+/* line 384, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 [class^="col-"] {
   float: left;
   padding: 0 15px;
 }
 
+/* line 389, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .row:after {
   content: "";
   /*on crée un espace vide*/
@@ -319,205 +409,227 @@ footer img {
   /*cela permet d'avoir un retour à la ligne*/
 }
 
+/* line 397, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .col-mob-1 {
   width: 8.33333%;
 }
 
+/* line 397, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .col-mob-2 {
   width: 16.66667%;
 }
 
+/* line 397, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .col-mob-3 {
   width: 25%;
 }
 
+/* line 397, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .col-mob-4 {
   width: 33.33333%;
 }
 
+/* line 397, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .col-mob-5 {
   width: 41.66667%;
 }
 
+/* line 397, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .col-mob-6 {
   width: 50%;
 }
 
+/* line 397, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .col-mob-7 {
   width: 58.33333%;
 }
 
+/* line 397, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .col-mob-8 {
   width: 66.66667%;
 }
 
+/* line 397, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .col-mob-9 {
   width: 75%;
 }
 
+/* line 397, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .col-mob-10 {
   width: 83.33333%;
 }
 
+/* line 397, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .col-mob-11 {
   width: 91.66667%;
 }
 
+/* line 397, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
 .col-mob-12 {
   width: 100%;
 }
 
-/*.col-mob-1 {width: 8.33%;}
-    .col-mob-2 {width: 16.66%;}
-    .col-mob-3 {width: 25%;}
-    .col-mob-4 {width: 33.33%;}
-    .col-mob-5 {width: 41.66%;}
-    .col-mob-6 {width: 50%;}
-    .col-mob-7 {width: 58.33%;}
-    .col-mob-8 {width: 66.66%;}
-    .col-mob-9 {width: 75%;}
-    .col-mob-10 {width: 83.33%;}
-    .col-mob-11 {width: 91.66%;}
-    .col-mob-12 {width: 100%;} */
 /****** END STYLE GRID ******/
 /****** START STYLES TABLETTE *****/
 @media only screen and (min-width: 640px) {
+  /* line 403, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   #overflow {
     width: calc((282px * 2) + (4 *  0.15rem));
   }
   /***** GEORGE *****/
   /********NAV*******************/
+  /* line 409, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   #divLogoForm,
   .payWrapper {
     margin: auto;
   }
   /*hide mobile bar*/
+  /* line 415, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .mobile-nav {
     display: none;
   }
   /**PAYMENT**********/
+  /* line 420, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   #divLogoPayment > img {
     display: inline-block;
   }
   /*show tablet menu*/
+  /* line 425, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   #navheader {
     display: block;
     margin: 2% 0 2% 0;
     border: solid;
   }
+  /* line 430, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   #navheader #navheader > ul {
     display: flex;
     justify-content: space-around;
   }
+  /* line 434, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   #navheader #navheader > ul li > a {
     text-decoration: none;
   }
+  /* line 440, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   #divLogoForm > form {
     position: absolute;
     margin: 2% 0 2% 15%;
   }
   /*****Form*****/
+  /* line 446, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .formWrapper > ul > li:nth-child(12) {
     text-align: center;
   }
   /**PAYMENT**********/
+  /* line 452, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .payWrapper > ul > li > ul {
     margin-left: 25%;
     list-style-type: none;
   }
+  /* line 457, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .payWrapper > div > input {
     margin: 2% 0 2% 50%;
     height: 30px;
   }
+  /* line 462, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .payWrapper > ul > li > p:last-child {
     font-size: 1.2rem;
   }
+  /* line 468, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+  footer ul {
+    border-top: solid;
+  }
+  /* line 472, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+  footer ul + ul {
+    border-left: solid;
+  }
+  /* line 476, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
+  footer > ul:nth-child(1) > li > a {
+    text-decoration: none;
+  }
   /****Footer*******/
+  /* line 483, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   #footerPayment > ul + ul {
     display: block;
   }
+  /* line 487, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   #footerPayment > ul + ul > li {
     text-align: center;
   }
   /*END GEORGE*/
-  footer ul {
-    border-top: solid;
-  }
-  footer ul + ul {
-    border-left: solid;
-  }
-  footer > ul:nth-child(1) > li > a {
-    text-decoration: none;
-  }
+  /* line 495, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-m-1 {
     width: 8.33333%;
   }
+  /* line 495, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-m-2 {
     width: 16.66667%;
   }
+  /* line 495, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-m-3 {
     width: 25%;
   }
+  /* line 495, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-m-4 {
     width: 33.33333%;
   }
+  /* line 495, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-m-5 {
     width: 41.66667%;
   }
+  /* line 495, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-m-6 {
     width: 50%;
   }
+  /* line 495, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-m-7 {
     width: 58.33333%;
   }
+  /* line 495, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-m-8 {
     width: 66.66667%;
   }
+  /* line 495, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-m-9 {
     width: 75%;
   }
+  /* line 495, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-m-10 {
     width: 83.33333%;
   }
+  /* line 495, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-m-11 {
     width: 91.66667%;
   }
+  /* line 495, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-m-12 {
     width: 100%;
   }
-  /*.col-m-1 {width: 8.33%;}
-      .col-m-2 {width: 16.66%;}
-      .col-m-3 {width: 25%;}
-      .col-m-4 {width: 33.33%;}
-      .col-m-5 {width: 41.66%;}
-      .col-m-6 {width: 50%;}
-      .col-m-7 {width: 58.33%;}
-      .col-m-8 {width: 66.66%;}
-      .col-m-9 {width: 75%;}
-      .col-m-10 {width: 83.33%;}
-      .col-m-11 {width: 91.66%;}
-      .col-m-12 {width: 100%;} */
 }
 
 /****** END STYLES TABLETTE  ****** /
 
   /****** START STYLES DESKTOP ******/
 @media only screen and (min-width: 960px) {
+  /* line 502, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   #overflow {
     width: calc((282px * 3) + (6 * 0.15rem));
   }
   /*******NAV*********/
+  /* line 507, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   #divLogoForm > form {
     display: none;
     position: relative;
   }
+  /* line 512, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   #divLogoForm > a > img {
     display: inline-block;
   }
+  /* line 516, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   #navheader {
     font-size: 1.5rem;
   }
   /********FORM FOR DESKTOP **********/
+  /* line 521, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   #navheader,
   .formWrapper > ul > li > label,
   .formWrapper > ul > li > p,
@@ -525,68 +637,74 @@ footer img {
   .formWrapper h1 {
     font-size: 1.5rem;
   }
+  /* line 529, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .formWrapper > ul > li input {
     height: 25px;
   }
+  /* line 533, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .formWrapper > ul > li > label,
   .formWrapper > ul > li > p {
     text-align: right;
   }
+  /* line 538, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .formWrapper h1 {
     text-align: center;
   }
   /*******FOOTER************/
+  /* line 543, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   #footerForm {
     font-size: 1.2rem;
   }
+  /* line 549, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-1 {
     width: 8.33333%;
   }
+  /* line 549, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-2 {
     width: 16.66667%;
   }
+  /* line 549, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-3 {
     width: 25%;
   }
+  /* line 549, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-4 {
     width: 33.33333%;
   }
+  /* line 549, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-5 {
     width: 41.66667%;
   }
+  /* line 549, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-6 {
     width: 50%;
   }
+  /* line 549, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-7 {
     width: 58.33333%;
   }
+  /* line 549, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-8 {
     width: 66.66667%;
   }
+  /* line 549, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-9 {
     width: 75%;
   }
+  /* line 549, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-10 {
     width: 83.33333%;
   }
+  /* line 549, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-11 {
     width: 91.66667%;
   }
+  /* line 549, C:/Users/Kevin/Desktop/TP-index-Kevin-George/sass/main.scss */
   .col-12 {
     width: 100%;
   }
-  /*.col-1 {width: 8.33%;}
-      .col-2 {width: 16.66%;}
-      .col-3 {width: 25%;}
-      .col-4 {width: 33.33%;}
-      .col-5 {width: 41.66%;}
-      .col-6 {width: 50%;}
-      .col-7 {width: 58.33%;}
-      .col-8 {width: 66.66%;}
-      .col-9 {width: 75%;}
-      .col-10 {width: 83.33%;}
-      .col-11 {width: 91.66%;}
-      .col-12 {width: 100%;}*/
 }
 
 /****** END STYLES DESKTOP ******/
+
+/*# sourceMappingURL=../css/main.map */

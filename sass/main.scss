@@ -10,6 +10,14 @@ $advertisement-margin: 0.15rem;
 $advertisement-stars-width: 150px;
 $panel-width: 416px;
 
+// ----
+$logo-width : 72px;
+$banner-width : 690px;
+$language-width : 85px;
+$header-form-li-margin-left-right: 5px;
+$header-input: 150px;
+
+
 /***** START FLEX METHODS *****/
 @mixin flex() {
     display: -webkit-box;
@@ -37,6 +45,8 @@ $panel-width: 416px;
 }
 /***** END TRANSITIION *****/
 
+
+
   *{
     padding: 0;
     margin:	0;
@@ -45,15 +55,17 @@ $panel-width: 416px;
     box-sizing: border-box;
   }
 
-  main {float: left}
+  main {
+    float: left
+  }
 
   ul {
     list-style-type: none;
   }
 
-  //img {
-  //  max-width:100%;
-  //}
+  header {
+    margin-bottom: 50px;
+  }
 
   article, aside, details, figcaption, figure, footer, header, main, nav, section {display: block; }
 
@@ -61,7 +73,78 @@ $panel-width: 416px;
   .blue {background-color: blue;}
   .red {background-color: red; }
   .panel {background-color:purple;}
-  aside {background-color: red;  }
+   aside {background-color: red;  }
+
+  /******  START HEADER   ******/
+  .header-top {
+    display:inline-block;
+    position:relative;
+    right:0px;
+
+    #h-logo {
+      display: block;
+      margin: 0 auto;
+    }
+
+    #h-banner {
+      //padding: 0 calc((100vw - (#{$logo-width} + #{$banner-width} + #{$language-width}))/2);
+      display: block;
+      left:0px;
+    }
+
+    #h-langue {
+    }
+  }
+
+  header {
+    nav {
+      background-color: $main-color;
+      float:right;
+      width: 80%;
+      padding: 0.5rem;
+
+      #nav-menu {
+        display: flex;
+        width: 100%;
+        height: 40px;
+
+        li {
+          margin: auto $header-form-li-margin-left-right;
+        }
+
+        #h-login {
+          //width: calc(#{$header-input} + (#{$header-form-li-margin-left-right} * 2) * 3);
+          display: flex;
+
+          li input {
+            width: $header-input;
+          }
+        }
+      }
+    }
+
+    #search-bars {
+      margin-left: 2rem;
+
+      .bar {
+        width: 80%;
+        height:35px;
+        margin-top:10px;
+      }
+
+      .bar-list {
+        position: relative;
+        left:30px;
+        bottom:15px;
+      }
+
+      & > input[type="image"] {
+        position: absolute;
+      }
+    }
+  }
+
+  /******  END HEADER   ******/
 
   /******  START FORM CSS   ******/
   /**************************************NAV************************************************************************************/
@@ -109,24 +192,24 @@ $panel-width: 416px;
   //  margin: 2% 0 2% 0;
   //}
 
-/***** END TESTING *****/
+  /***** END TESTING *****/
 
-/*margin among lines*/
-.formWrapper > ul > li,
-.formWrapper > h1,
-.payWrapper > ul > li,
-.payWrapper > ul > li > ul > li {
-  margin: 2% 0 2% 0;
-}
+  /*margin among lines*/
+  .formWrapper > ul > li,
+  .formWrapper > h1,
+  .payWrapper > ul > li,
+  .payWrapper > ul > li > ul > li {
+    margin: 2% 0 2% 0;
+  }
 
-.formWrapper > ul > li > label,
-.formWrapper > ul > li > p,
-.formWrapper > ul > li > span,
-.payWrapper > ul > li {
-  font-weight:bold;
-}
+  .formWrapper > ul > li > label,
+  .formWrapper > ul > li > p,
+  .formWrapper > ul > li > span,
+  .payWrapper > ul > li {
+    font-weight:bold;
+  }
 
-/*********PAYMENT**********/
+  /*********PAYMENT**********/
   .payWrapper {
     img{
       width: 25px;
@@ -142,44 +225,6 @@ $panel-width: 416px;
     list-style-type: disc;
   }
   /****** END FORM CSS   ******/
-
-  /******  START HEADER   ******/
-  #langue {
-    float:right;
-  }
-
-  nav {
-    background-color: $main-color;
-    width: 95%;
-    margin: 0 auto;
-    padding: 1rem;
-
-    li {
-      display: inline-block;
-      width: 20%;
-    }
-  }
-
-  #search-bars {
-    margin-left: 2rem;
-
-    .bar {
-      width: 80%;
-      height:35px;
-      margin-top:10px;
-    }
-
-    .bar-list {
-      position: relative;
-      left:30px;
-      bottom:15px;
-    }
-  }
-
-  #search-bars > input[type="image"] {
-    position: absolute;
-  }
-  /******  END HEADER   ******/
 
   /*---------- ***** START CAROUSEL ***** ----------*/
   #overflow {
@@ -283,7 +328,6 @@ $panel-width: 416px;
   .commentary {
     margin-top: 1rem;
   }
-
   /* END MOBILE INDEX Advertisement */
 
   /*---------- ***** END CAROUSEL ***** ----------*/
@@ -337,11 +381,6 @@ $panel-width: 416px;
     /***** END FOOTER *****/
 
     /****** START STYLE GRID ******/
-    //[class*="col-"] {
-    //  width: 100%;
-    //  float: left;
-    //}
-
     [class^="col-"]{
       float:left;
       padding:0 15px;
@@ -355,23 +394,8 @@ $panel-width: 416px;
 
     @for $i from 1 through 12 {
       $width: percentage($i/12);
-
       .col-mob-#{$i} { width: $width; }
     }
-
-    /*.col-mob-1 {width: 8.33%;}
-    .col-mob-2 {width: 16.66%;}
-    .col-mob-3 {width: 25%;}
-    .col-mob-4 {width: 33.33%;}
-    .col-mob-5 {width: 41.66%;}
-    .col-mob-6 {width: 50%;}
-    .col-mob-7 {width: 58.33%;}
-    .col-mob-8 {width: 66.66%;}
-    .col-mob-9 {width: 75%;}
-    .col-mob-10 {width: 83.33%;}
-    .col-mob-11 {width: 91.66%;}
-    .col-mob-12 {width: 100%;} */
-
     /****** END STYLE GRID ******/
 
     /****** START STYLES TABLETTE *****/
@@ -381,7 +405,6 @@ $panel-width: 416px;
       }
 
       /***** GEORGE *****/
-
       /********NAV*******************/
       #divLogoForm,
       .payWrapper {
@@ -441,19 +464,6 @@ $panel-width: 416px;
         }
       }
 
-      /****Footer*******/
-      #footerPayment {
-        & > ul + ul {
-          display: block;
-        }
-
-        & > ul + ul > li {
-          text-align:center;
-        }
-      }
-
-      /*END GEORGE*/
-
       footer {
         ul {
           border-top:solid;
@@ -468,24 +478,22 @@ $panel-width: 416px;
         }
       }
 
+      /****Footer*******/
+      #footerPayment {
+        & > ul + ul {
+          display: block;
+        }
+
+        & > ul + ul > li {
+          text-align:center;
+        }
+      }
+      /*END GEORGE*/
+
       @for $i from 1 through 12 {
         $width: percentage($i/12);
-
         .col-m-#{$i} { width: $width; }
       }
-
-      /*.col-m-1 {width: 8.33%;}
-      .col-m-2 {width: 16.66%;}
-      .col-m-3 {width: 25%;}
-      .col-m-4 {width: 33.33%;}
-      .col-m-5 {width: 41.66%;}
-      .col-m-6 {width: 50%;}
-      .col-m-7 {width: 58.33%;}
-      .col-m-8 {width: 66.66%;}
-      .col-m-9 {width: 75%;}
-      .col-m-10 {width: 83.33%;}
-      .col-m-11 {width: 91.66%;}
-      .col-m-12 {width: 100%;} */
 
     }/****** END STYLES TABLETTE  ****** /
 
@@ -538,21 +546,7 @@ $panel-width: 416px;
 
       @for $i from 1 through 12 {
         $width: percentage($i/12);
-
         .col-#{$i} { width: $width; }
       }
-
-      /*.col-1 {width: 8.33%;}
-      .col-2 {width: 16.66%;}
-      .col-3 {width: 25%;}
-      .col-4 {width: 33.33%;}
-      .col-5 {width: 41.66%;}
-      .col-6 {width: 50%;}
-      .col-7 {width: 58.33%;}
-      .col-8 {width: 66.66%;}
-      .col-9 {width: 75%;}
-      .col-10 {width: 83.33%;}
-      .col-11 {width: 91.66%;}
-      .col-12 {width: 100%;}*/
   }
 /****** END STYLES DESKTOP ******/
