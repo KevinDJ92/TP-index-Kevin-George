@@ -26,7 +26,7 @@
 				<img id="h-logo" src="images/logo/logo.png" alt="logo">
 			</div>
 			<div id="h-banner" class="col-9">
-				<img src="images/logo/banner.jpg">
+				<img src="images/logo/banner.jpg" alt="banner">
 			</div>
 			<div class="col-2 col-m-2">
 				<select id="h-langue">
@@ -163,30 +163,47 @@
 		</div>
 	</form>
 	</main>
-	<footer class="row col-mob-10" id="footerForm ">
 
-			<div class="col-mob-12">
+    <footer class="row col-mob-10" id="footerForm ">
 
-			<p>Suivez nous</p>
-			<ul class="">
+        <div class="col-mob-12">
 
-				<li><a href="http://www.linkedin.com/"> <img src="images/logo/linkedin.png" alt="linkedin"/></a></li>
-				<li><a href="http://www.facebook.com/"><img src="images/logo/facebook.png" alt="face"/></a></li>
-				<li><a href="https://twitter.com/"> <img src="images/logo/twitter.png" alt="twitter"/></a></li>
-			</ul>
-			</div>
-			<div class="col-mob-12">
+            <p>Suivez nous</p>
+            <ul class="">
 
-			<p> À propo lesPro</p>
-			<ul class="">
+                <li><a href="http://www.linkedin.com/"> <img src="images/logo/linkedin.png" alt="linkedin"/></a></li>
+                <li><a href="http://www.facebook.com/"><img src="images/logo/facebook.png" alt="face"/></a></li>
+                <li><a href="https://twitter.com/"> <img src="images/logo/twitter.png" alt="twitter"/></a></li>
+            </ul>
+        </div>
+        <div class="col-mob-12">
 
-				<li><a href="index.html" class="navigation">About Us</a></li>
-				<li><a href="index.html" class="navigation">Contact Us</a></li>
-				<li><a href="terms.html" class="navigation">Terms and Conditions</a></li>
-			</ul>
-			</div>
+            <p> À propo lesPro</p>
+            <ul class="">
+
+                <div itemscope itemtype="http://schema.org/Organization">
+                    <li><span itemprop="name">Les Pro</span></li>
+                    Contact Details:
+                    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        Main address:
+                        <li><span itemprop="streetAddress">38 avenue de l'Opera</span></li>
+                        <li><span itemprop="postalCode">F-75002</span></li>
+                        <li><span itemprop="addressLocality">Montréal, Canada</span></li>
+                    </div>
+                    <li>Tel:<span itemprop="telephone">(  1 )514 42 68 53 00 </span></li>
+                    <li>Fax:<span itemprop="faxNumber">( 33 1) 42 68 53 01 </span></li>
+                    <li>E-mail: <span itemprop="email">lesPros@lesPros.com</span></li>
+
+                </div>
+
+                <li><a href="index.html" class="navigation">About Us</a></li>
+                <li><a href="index.html" class="navigation">Contact Us</a></li>
+                <li><a href="terms.html" class="navigation">Terms and Conditions</a></li>
+            </ul>
+        </div>
 
 
-		</footer>
-	</body>
+    </footer>
+
+    </body>
 </html>
