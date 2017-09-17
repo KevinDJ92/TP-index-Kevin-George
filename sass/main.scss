@@ -1,4 +1,4 @@
-﻿// ---- COLORS
+﻿﻿// ---- COLORS
 $main-color : #f49a02;
 $nav-color: #fff;
 $footer-color-1: #68420a;
@@ -9,6 +9,14 @@ $advertisement-width: 282px;
 $advertisement-margin: 0.15rem;
 $advertisement-stars-width: 150px;
 $panel-width: 416px;
+
+// ----
+$logo-width : 72px;
+$banner-width : 690px;
+$language-width : 85px;
+$header-form-li-margin-left-right: 5px;
+$header-input: 150px;
+
 
 /***** START FLEX METHODS *****/
 @mixin flex() {
@@ -37,6 +45,8 @@ $panel-width: 416px;
 }
 /***** END TRANSITIION *****/
 
+
+
   *{
     padding: 0;
     margin:	0;
@@ -45,15 +55,17 @@ $panel-width: 416px;
     box-sizing: border-box;
   }
 
-  main {float: left}
+  main {
+    float: left
+  }
 
   ul {
     list-style-type: none;
   }
 
-#bodyForm img, #bodyPayment img{
-  max-width:100%;
-}
+  header {
+    margin-bottom: 50px;
+  }
 
   article, aside, details, figcaption, figure, footer, header, main, nav, section {display: block; }
 
@@ -61,26 +73,82 @@ $panel-width: 416px;
   .blue {background-color: blue;}
   .red {background-color: red; }
   .panel {background-color:purple;}
-  aside {background-color: red;  }
+   aside {background-color: red;  }
+
+  /******  START HEADER   ******/
+  .header-top {
+    display:inline-block;
+    position:relative;
+    right:0px;
+
+    #h-logo {
+      display: block;
+      margin: 0 auto;
+    }
+
+    #h-banner {
+      //padding: 0 calc((100vw - (#{$logo-width} + #{$banner-width} + #{$language-width}))/2);
+      display: block;
+      left:0px;
+    }
+
+    #h-langue {
+    }
+  }
+
+  header {
+    nav {
+      background-color: $main-color;
+      float:right;
+      width: 80%;
+      padding: 0.5rem;
+
+      #nav-menu {
+        display: flex;
+        width: 100%;
+        height: 40px;
+
+        li {
+          margin: auto $header-form-li-margin-left-right;
+        }
+
+        #h-login {
+          //width: calc(#{$header-input} + (#{$header-form-li-margin-left-right} * 2) * 3);
+          display: flex;
+
+          li input {
+            width: $header-input;
+          }
+        }
+      }
+    }
+
+    #search-bars {
+      margin-left: 2rem;
+
+      .bar {
+        width: 80%;
+        height:35px;
+        margin-top:10px;
+      }
+
+      .bar-list {
+        position: relative;
+        left:30px;
+        bottom:15px;
+      }
+
+      & > input[type="image"] {
+        position: absolute;
+      }
+    }
+  }
+
+  /******  END HEADER   ******/
 
   /******  START FORM CSS   ******/
   /**************************************NAV************************************************************************************/
-
-#divLogoForm>img,#divLogoForm #navheader,#divLogoPayment>img,#bodyPayment #navheader{
-
-  display:none;
-
-}
-
-/* label and input height!*/
-.formWrapper input,.formWrapper label{
-
-  height: 40px;
-
-}
-/*end of label and input height!*/
-
- .menu-nav {
+  .menu-nav {
     display: none;
   }
 
@@ -124,24 +192,24 @@ $panel-width: 416px;
   //  margin: 2% 0 2% 0;
   //}
 
-/***** END TESTING *****/
+  /***** END TESTING *****/
 
-/*margin among lines*/
-.formWrapper > ul > li,
-.formWrapper > h1,
-.payWrapper > ul > li,
-.payWrapper > ul > li > ul > li {
-  margin: 2% 0 2% 0;
-}
+  /*margin among lines*/
+  .formWrapper > ul > li,
+  .formWrapper > h1,
+  .payWrapper > ul > li,
+  .payWrapper > ul > li > ul > li {
+    margin: 2% 0 2% 0;
+  }
 
-.formWrapper > ul > li > label,
-.formWrapper > ul > li > p,
-.formWrapper > ul > li > span,
-.payWrapper > ul > li,.formWrapper>div p {
-  font-weight:bold;
-}
+  .formWrapper > ul > li > label,
+  .formWrapper > ul > li > p,
+  .formWrapper > ul > li > span,
+  .payWrapper > ul > li {
+    font-weight:bold;
+  }
 
-/*********PAYMENT**********/
+  /*********PAYMENT**********/
   .payWrapper {
     img{
       width: 25px;
@@ -153,46 +221,10 @@ $panel-width: 416px;
     }
   }
 
-
+  footer ul:first-child {
+    list-style-type: disc;
+  }
   /****** END FORM CSS   ******/
-
-  /******  START HEADER   ******/
-  #langue {
-    float:right;
-  }
-
-  nav {
-    background-color: $main-color;
-    width: 95%;
-    margin: 0 auto;
-    padding: 1rem;
-
-    li {
-      display: inline-block;
-      width: 20%;
-    }
-  }
-
-  #search-bars {
-    margin-left: 2rem;
-
-    .bar {
-      width: 80%;
-      height:35px;
-      margin-top:10px;
-    }
-
-    .bar-list {
-      position: relative;
-      left:30px;
-      bottom:15px;
-    }
-  }
-
-  #search-bars > input[type="image"] {
-    position: absolute;
-  }
-  /******  END HEADER   ******/
 
   /*---------- ***** START CAROUSEL ***** ----------*/
   #overflow {
@@ -296,7 +328,6 @@ $panel-width: 416px;
   .commentary {
     margin-top: 1rem;
   }
-
   /* END MOBILE INDEX Advertisement */
 
   /*---------- ***** END CAROUSEL ***** ----------*/
@@ -333,64 +364,24 @@ $panel-width: 416px;
   }
 
   /***** START FOOTER *****/
-footer {
-
-  margin:auto;
+  footer {
     img {
       width: 30px;
       height: 30px;
     }
   }
 
-footer>div:nth-child(1)>ul{
-background-color: #1abc9c;
-display:flex;
- justify-content: space-around;
-}
-
-footer>div>p{
-  text-align: center;
-}
-
-
-
-/*footer ul:first-child {
-  list-style-type: disc;
-}*/
-
-
-
-
-
-
-
-
-
-
-
- footer ul:nth-child(2) li{
-
-   list-style-type: none;
-
-
- }
-
-  /*#footerForm > ul + ul > li {
+  #footerForm > ul + ul > li {
       text-align: center;
-  }*/
+  }
 
-    /*#footerPayment > ul + ul {
+    #footerPayment > ul + ul {
         display: flex;
-    }*/
+    }
     /***** END FOOTER *****/
 
     /****** START STYLE GRID ******/
-    //[class*="col-"] {
-    //  width: 100%;
-    //  float: left;
-    //}
-
-    [class*="col-"]{
+    [class^="col-"]{
       float:left;
       padding:0 15px;
     }
@@ -403,120 +394,9 @@ footer>div>p{
 
     @for $i from 1 through 12 {
       $width: percentage($i/12);
-
       .col-mob-#{$i} { width: $width; }
     }
-
-    /*.col-mob-1 {width: 8.33%;}
-    .col-mob-2 {width: 16.66%;}
-    .col-mob-3 {width: 25%;}
-    .col-mob-4 {width: 33.33%;}
-    .col-mob-5 {width: 41.66%;}
-    .col-mob-6 {width: 50%;}
-    .col-mob-7 {width: 58.33%;}
-    .col-mob-8 {width: 66.66%;}
-    .col-mob-9 {width: 75%;}
-    .col-mob-10 {width: 83.33%;}
-    .col-mob-11 {width: 91.66%;}
-    .col-mob-12 {width: 100%;} */
-
     /****** END STYLE GRID ******/
-
-    /****** ACCORDION ******/
-
-    /*Margin*/
-
-    .formWrapper>div{
-
-
-      margin: 4% 0 4% 15%;
-
-    }
-
-
-    /*End Margin*/
-    .tab {
-      position: relative;
-      margin-bottom: 1px;
-      width: 100%;
-      color: #fff;
-      overflow: hidden;
-    }
-
-    .half input {
-      position: absolute;
-      opacity: 0;
-      z-index: -1;
-    }
-
-    .half label {
-      position: relative;
-      display: block;
-      padding: 0 0 0 16px;
-      background: #16a085;
-      font-weight: bold;
-      line-height: 3;
-      cursor: pointer;
-    }
-
-    .blue label {
-      background: #2980b9;
-    }
-
-    .tab-content {
-      max-height: 0;
-      overflow: hidden;
-      background: #1abc9c;
-      -webkit-transition: max-height .35s;
-      -o-transition: max-height .35s;
-      transition: max-height .35s;
-    }
-
-    .blue .tab-content {
-      background: #3498db;
-    }
-
-    .tab-content p {
-      margin: 16px;
-    }
-
-    .half  input:checked ~ .tab-content {
-      max-height: 160px;
-    }
-
-    /********/
-    .half label::after {
-      position: absolute;
-      right: 0;
-      top: 0;
-      display: block;
-      width: 48px;
-      height: 48px;
-      line-height: 3;
-      text-align: center;
-      -webkit-transition: all .35s;
-      -o-transition: all .35s;
-      transition: all .35s;
-    }
-
-    .half input[type=checkbox] + label::after {
-      content: "+";
-    }
-    .half input[type=radio] + label::after {
-      content: "\25BC";
-    }
-
-    .half input[type=checkbox]:checked + label::after {
-      transform: rotate(315deg);
-    }
-    .half input[type=radio]:checked + label::after {
-      transform: rotateX(180deg);
-    }
-
-
-
-    /****** END ACCORDION ******/
-
 
     /****** START STYLES TABLETTE *****/
     @media only screen and (min-width:640px){
@@ -525,10 +405,9 @@ footer>div>p{
       }
 
       /***** GEORGE *****/
-
       /********NAV*******************/
-      #divLogoForm
-     {
+      #divLogoForm,
+      .payWrapper {
         margin:auto;
       }
 
@@ -543,10 +422,7 @@ footer>div>p{
       }
 
       /*show tablet menu*/
-
-
-
-     /* #navheader {
+      #navheader {
         display:block;
         margin: 2% 0 2% 0;
         border:solid;
@@ -559,26 +435,7 @@ footer>div>p{
             text-decoration:none;
           }
         }
-      }*/
-
-
-      #divLogoForm #navheader,#bodyPayment #navheader{
-        display:block;
-        margin: 2% 0 2% 0;
-        border:solid;
       }
-
-      #divLogoForm #navheader>ul,#bodyPayment #navheader>ul{
-
-        display:flex;
-        justify-content:space-around;
-      }
-
-      #divLogoForm #navheader>ul>li>a,#bodyPayment #navheader>ul>li>a{
-
-        text-decoration:none;
-      }
-
 
       #divLogoForm > form {
         position:absolute;
@@ -607,19 +464,6 @@ footer>div>p{
         }
       }
 
-      /****Footer*******/
-      #footerPayment {
-        & > ul + ul {
-          display: block;
-        }
-
-        & > ul + ul > li {
-          text-align:center;
-        }
-      }
-
-      /*END GEORGE*/
-
       footer {
         ul {
           border-top:solid;
@@ -634,24 +478,22 @@ footer>div>p{
         }
       }
 
+      /****Footer*******/
+      #footerPayment {
+        & > ul + ul {
+          display: block;
+        }
+
+        & > ul + ul > li {
+          text-align:center;
+        }
+      }
+      /*END GEORGE*/
+
       @for $i from 1 through 12 {
         $width: percentage($i/12);
-
         .col-m-#{$i} { width: $width; }
       }
-
-      /*.col-m-1 {width: 8.33%;}
-      .col-m-2 {width: 16.66%;}
-      .col-m-3 {width: 25%;}
-      .col-m-4 {width: 33.33%;}
-      .col-m-5 {width: 41.66%;}
-      .col-m-6 {width: 50%;}
-      .col-m-7 {width: 58.33%;}
-      .col-m-8 {width: 66.66%;}
-      .col-m-9 {width: 75%;}
-      .col-m-10 {width: 83.33%;}
-      .col-m-11 {width: 91.66%;}
-      .col-m-12 {width: 100%;} */
 
     }/****** END STYLES TABLETTE  ****** /
 
@@ -662,28 +504,17 @@ footer>div>p{
       }
 
       /*******NAV*********/
-      /*#divLogoForm > form{
+      #divLogoForm > form{
         display:none;
         position:relative;
       }
 
       #divLogoForm > a > img{
         display:inline-block;
-      }*/
-
-      #divLogoPayment, #divLogoForm{
-
-        margin-left:5%;
-
-      }
-      #bodyForm #divLogoForm>form{
-
-        position:relative;
       }
 
-      #divLogoForm>img{
-
-        display:inline-block;
+      #navheader{
+        font-size:1.5rem;
       }
 
       /********FORM FOR DESKTOP **********/
@@ -691,51 +522,18 @@ footer>div>p{
       .formWrapper > ul > li > label,
       .formWrapper > ul > li > p,
       .formWrapper > ul > li > span,
-      .formWrapper h1,.formWrapper>div p,
-      .payWrapper > ul > li > label,
-      .payWrapper > ul > li > p,
-      .payWrapper > ul > li > span,
-      .payWrapper h1,.payWrapper>ul>li>p
-
-      {
+      .formWrapper h1 {
         font-size:1.5rem;
-       }
-
-      .payWrapper>ul>li:nth-child(7)>p,.payWrapper>ul>li:nth-child(14)>p{
-
-
-        margin-left:5%;
-
-
       }
 
-
-      .formWrapper > ul > li input,.payWrapper> ul > li input,.payWrapper> ul > li select{
-        height: 35px;
+      .formWrapper > ul > li input{
+        height: 25px;
       }
 
       .formWrapper > ul > li > label,
-      .formWrapper > ul > li > p
-      {
+      .formWrapper > ul > li > p {
         text-align: right;
       }
-
-      .payWrapper > ul > li > label,.payWrapper > ul > li:nth-child(1) > p,.payWrapper>ul>li:nth-child(12)>p{
-
-
-        text-align: right;
-
-      }
-
-      .payWrapper > ul > li:nth-child(2) > p{
-
-
-      font-size:1.5rem;
-
-    }
-
-
-
 
       .formWrapper h1{
         text-align: center;
@@ -748,21 +546,7 @@ footer>div>p{
 
       @for $i from 1 through 12 {
         $width: percentage($i/12);
-
         .col-#{$i} { width: $width; }
       }
-
-      /*.col-1 {width: 8.33%;}
-      .col-2 {width: 16.66%;}
-      .col-3 {width: 25%;}
-      .col-4 {width: 33.33%;}
-      .col-5 {width: 41.66%;}
-      .col-6 {width: 50%;}
-      .col-7 {width: 58.33%;}
-      .col-8 {width: 66.66%;}
-      .col-9 {width: 75%;}
-      .col-10 {width: 83.33%;}
-      .col-11 {width: 91.66%;}
-      .col-12 {width: 100%;}*/
   }
 /****** END STYLES DESKTOP ******/
