@@ -1,195 +1,192 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="utf-8">
-	<title>Les Pro</title>
-	<meta name="author" content="Les Pro" >
-	<meta name="description" content="a linkedin but different" >
-	<link rel="stylesheet" href="css/main.css">
-	<script src="script/main.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<head>
+		<meta charset="utf-8">
+		<title>Les Pro</title>
+		<meta name="author" content="Les Pro" >
+		<meta name="description" content="a linkedin but different" >
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+		<meta property="og:url" content="http://formulaire.com"/>
+		<meta property="og:title" content="This is a basic text"/>
+		<meta property="og:description" content="This is a basic text"/>
+		<meta property="og:image" content="http://index.com/images/logo/logo.png" />
+		<meta property="og:image:width" content="300"/>
+		<meta property="og:image:height" content="300"/>
 
-	<!--[if lt IE 9]>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<![endif]-->
+		<link rel="stylesheet" href="css/main.css">
+		<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<![endif]-->
+	</head>
+	<body id="bodyForm">
+	<header>
+		<div class="row header-top col-12 menu-nav">
+			<div class="col-1 col-m-10">
+				<img id="h-logo" src="images/logo/logo.png" alt="logo">
+			</div>
+			<div id="h-banner" class="col-9">
+				<img src="images/logo/banner.jpg">
+			</div>
+			<div class="col-2 col-m-2">
+				<select id="h-langue">
+					<option>Français</option>
+					<option>Anglais</option>
+				</select>
+			</div>
+		</div>
+		<nav class="row nav-standard menu-nav">
+			<ul id="nav-menu">
+				<li>
+					<form>
+						<ul id="h-login">
+							<li>
+								<input type="email" name="email" placeholder="email@email.com" required>
+							</li>
+							<li>
+								<input type="password" name="password" placeholder="password" required/>
+							</li>
+							<li>
+								<input type="submit" value="Connexion">
+							</li>
+						</ul>
+					</form>
+				</li>
+				<li><a href="formulaire.html">Devenez un membre</a></li>
+				<li><img src="images/logo/cart-icon.png">0</li>
+			</ul>
+		</nav>
+		<div class="mobile-nav col-mob-12">
+			<!-- menu hamburger -->
+			<div class="menu-btn" id="menu-hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</header>
 
-</head>
-<body id="bodyForm">
-<header>
-	<div class="row header-top col-12 menu-nav">
-		<div class="col-1 col-m-10">
-			<img id="h-logo" src="images/logo/logo.png" alt="logo">
-		</div>
-		<div id="h-banner" class="col-9">
-			<img src="images/logo/banner.jpg">
-		</div>
-		<div class="col-2 col-m-2">
-			<select id="h-langue">
-				<option>Français</option>
-				<option>Anglais</option>
-			</select>
-		</div>
-	</div>
-	<nav class="row nav-standard menu-nav">
-		<ul id="nav-menu">
-			<li>
-				<form>
-					<ul id="h-login">
-						<li>
-							<input type="email" name="email" placeholder="email@email.com" required>
-						</li>
-						<li>
-							<input type="password" name="password" placeholder="password" required/>
-						</li>
-						<li>
-							<input type="submit" value="Connexion">
-						</li>
-					</ul>
-				</form>
+	<main>
+		<form class="col-mob-12 col-m-8 col-8">
+			<input type="search" placeholder="chercher"class="col-mob-12"/>
+			<input type="submit" value="Soumettre" class="">
+		</form>
+
+	<form class="formWrapper col-10" action="pending"  id="formFormul">
+		<h1 class=""> Devenez un Membre: </h1>
+		<ul class="row">
+			<li class="col-mob-12" ><label for="name" class="col-mob-12 col-m-3">Prenom <span>(*):</span></label>
+				<input type="text" id="name" value="name" placeholder="Name"  class="col-mob-12 col-m-9" required></li>
+			<li class="col-mob-12"><label for="lastName" class="col-mob-12 col-m-3">Nom <span>(*):</span></label>
+				<input type="text" id="lastName" value="lastName" placeholder="Last Name" class="col-mob-12 col-m-9" required></li>
+			<li class="col-mob-12"><label for="email" class="col-mob-12 col-m-3">Email <span>(*):</span></label>
+				<input type="email" name="email" id="email" placeholder="fulanito@detal.com" class="col-mob-12 col-m-9" required></li>
+			<li class="col-mob-12">
+				<p class="col-mob-12 col-m-3"><span>Genre:</span></p>
+				<ul class="row">
+					<li class="col-mob-4 col-m-4 col-2"><input type="checkbox" name="gender" id="female" value="female"/>
+						<label for="female">Femelle</label></li>
+					<li class="col-mob-4 col-m-4 col-2" ><input type="checkbox" name="gender" id="male" value="male"/>
+						<label for="male">Mâle</label></li>
+				</ul>
 			</li>
-			<li><a href="formulaire.html">Devenez un membre</a></li>
-			<li><img src="images/logo/cart-icon.png">0</li>
-		</ul>
-	</nav>
-	<div class="mobile-nav col-mob-12">
-		<!-- menu hamburger -->
-		<div class="menu-btn" id="menu-hamburger">
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-	</div>
-</header>
+			<li class="col-mob-12"><label for="password" class="col-mob-12 col-m-3">Mot de passe<span>(*):</span></label>
+				<input type="password" name="password" id="password" placeholder="password" class="col-mob-12 col-m-9" required/></li>
+			<li class="col-mob-12" ><label for="repassword" class="col-mob-12 col-m-3">Confirmez Mot<span>(*):</span></label>
+				<input type="password" name="repassword" id="repassword" placeholder="password" class="col-mob-12 col-m-9" required/></li>
+			<li class="col-mob-12"><label for="date"  class="col-mob-12 col-m-3">Date <span>(*):</span></label>
+				<input type="date" name="date" id="date" class="col-mob-12 col-m-9" required/></li>
+			<li class="col-mob-12"><label for="tel" class="col-mob-12 col-m-3">Téléphone <span>(*):</span></label>
+				<input type="tel" name="tel" id="tel" pattern="^\(?\d{3}\)?(-| )?\d{3}(-| )?\d{4}$" placeholder="000-000-0000"class="col-mob-12 col-m-9"></li>
+			<li class="col-mob-12"><label for="field" class="col-mob-12 col-m-3">Domaine :</label>
+				<input list="infoField" type="text" id="field" class="col-mob-12 col-m-9" >
+				<datalist id="infoField">
+					<option>Plumber</option>
+					<option>Dentist</option>
+				</datalist></li>
+			<li class="row" >
+				<p class="col-m-3" id="idP"><span>Expériencee :</span></p>
 
-<main>
-	<form class="col-mob-12 col-m-8 col-8">
-		<input type="search" placeholder="chercher"class="col-mob-12"/>
-		<input type="submit" value="Soumettre" class="">
+				<ul class="col-m-9">
+					<li class="invente col-mob-12 col-m-3 col-2"><input type="radio" name="expirience" id="firsTime" value="1" />
+						<label for="firsTime">0-1</label></li>
+					<li class="invente col-mob-12 col-m-3 col-2"><input type="radio" name="expirience" id="secondTime" value="2"/>
+						<label for="secondTime">2-3</label></li>
+					<li class="invente col-mob-12 col-m-3 col-2"><input type="radio" name="expirience" id="thirdTime" value="3"/>
+						<label for="thirdTime">4-5</label></li>
+					<li class="invente col-mob-12 col-m-3 col-2"><input type="radio" name="expirience" id="fourthTime" value="4"/>
+						<label for="fourthTime">6-10</label></li>
+					<li class="invente col-mob-12 col-m-3 col-2"><input type="radio" name="expirience" id="fithTime" value="5"/>
+						<label for="fithTime">11-(+)</label></li>
+				</ul>
+			</li>
+
+			<li class="col-mob-12">
+				<p class="col-mob-3"><span>Ville:</span></p>
+				<select name="city" id="city">
+					<option value="montreal">Montréal</option>
+					<option value="quebec">Québec</option>
+					<option value="laval">Laval</option>
+				</select>
+			</li>
+			<li class="col-mob-12 col-m-12 col-12" ><label for="who" class="col-m-3">Comment arrivez-vous ici?</label>
+				<textarea name="who" id="who" class="col-mob-12 col-m-10 col-5"></textarea></li>
+			</ul>
+		<div class="col-mob-6 col-mob-10 col-10">
+			<input type="submit" class="go" value="Soumettre">
+		</div>
+
+		<div class="half row col-mob-10 col-10">
+			<p> Les Pros type de membre</p>
+			<div class="tab blue">
+				<input id="tab-four" type="radio" name="tabs2">
+				<label for="tab-four">Basic</label>
+				<div class="tab-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+				</div>
+			</div>
+			<div class="tab blue">
+				<input id="tab-five" type="radio" name="tabs2">
+				<label for="tab-five">Préférentiel</label>
+				<div class="tab-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+				</div>
+			</div>
+			<div class="tab blue">
+				<input id="tab-six" type="radio" name="tabs2">
+				<label for="tab-six">V.I.P.</label>
+				<div class="tab-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+				</div>
+			</div>
+		</div>
+		</div>
 	</form>
+	</main>
+	<footer class="row col-mob-10" id="footerForm ">
 
-<form class="formWrapper col-10" action="pending"  id="formFormul">
-	<h1 class=""> Devenez un Membre: </h1>
-	<ul class="row">
-		<li class="col-mob-12" ><label for="name" class="col-mob-12 col-m-3">Prenom <span>(*):</span></label>
-			<input type="text" id="name" value="name" placeholder="Name"  class="col-mob-12 col-m-9" required></li>
-		<li class="col-mob-12"><label for="lastName" class="col-mob-12 col-m-3">Nom <span>(*):</span></label>
-			<input type="text" id="lastName" value="lastName" placeholder="Last Name" class="col-mob-12 col-m-9" required></li>
-		<li class="col-mob-12"><label for="email" class="col-mob-12 col-m-3">Email <span>(*):</span></label>
-			<input type="email" name="email" id="email" placeholder="fulanito@detal.com" class="col-mob-12 col-m-9" required></li>
-		<li class="col-mob-12">
-			<p class="col-mob-12 col-m-3"><span>Genre:</span></p>
-			<ul class="row">
-				<li class="col-mob-4 col-m-4 col-2"><input type="checkbox" name="gender" id="female" value="female"/>
-					<label for="female">Femelle</label></li>
-				<li class="col-mob-4 col-m-4 col-2" ><input type="checkbox" name="gender" id="male" value="male"/>
-					<label for="male">Mâle</label></li>
+			<div class="col-mob-12">
+
+			<p>Suivez nous</p>
+			<ul class="">
+
+				<li><a href="http://www.linkedin.com/"> <img src="images/logo/linkedin.png" alt="linkedin"/></a></li>
+				<li><a href="http://www.facebook.com/"><img src="images/logo/facebook.png" alt="face"/></a></li>
+				<li><a href="https://twitter.com/"> <img src="images/logo/twitter.png" alt="twitter"/></a></li>
 			</ul>
-		</li>
-		<li class="col-mob-12"><label for="password" class="col-mob-12 col-m-3">Mot de passe<span>(*):</span></label>
-			<input type="password" name="password" id="password" placeholder="password" class="col-mob-12 col-m-9" required/></li>
-		<li class="col-mob-12" ><label for="repassword" class="col-mob-12 col-m-3">Confirmez Mot<span>(*):</span></label>
-			<input type="password" name="repassword" id="repassword" placeholder="password" class="col-mob-12 col-m-9" required/></li>
-		<li class="col-mob-12"><label for="date"  class="col-mob-12 col-m-3">Date <span>(*):</span></label>
-			<input type="date" name="date" id="date" class="col-mob-12 col-m-9" required/></li>
-		<li class="col-mob-12"><label for="tel" class="col-mob-12 col-m-3">Téléphone <span>(*):</span></label>
-			<input type="tel" name="tel" id="tel" pattern="^\(?\d{3}\)?(-| )?\d{3}(-| )?\d{4}$" placeholder="000-000-0000"class="col-mob-12 col-m-9"></li>
-		<li class="col-mob-12"><label for="field" class="col-mob-12 col-m-3">Domaine :</label>
-			<input list="infoField" type="text" id="field" class="col-mob-12 col-m-9" >
-			<datalist id="infoField">
-				<option>Plumber</option>
-				<option>Dentist</option>
-			</datalist></li>
-		<li class="row" >
-			<p class="col-m-3" id="idP"><span>Expériencee :</span></p>
+			</div>
+			<div class="col-mob-12">
 
-			<ul class="col-m-9">
-				<li class="invente col-mob-12 col-m-3 col-2"><input type="radio" name="expirience" id="firsTime" value="1" />
-					<label for="firsTime">0-1</label></li>
-				<li class="invente col-mob-12 col-m-3 col-2"><input type="radio" name="expirience" id="secondTime" value="2"/>
-					<label for="secondTime">2-3</label></li>
-				<li class="invente col-mob-12 col-m-3 col-2"><input type="radio" name="expirience" id="thirdTime" value="3"/>
-					<label for="thirdTime">4-5</label></li>
-				<li class="invente col-mob-12 col-m-3 col-2"><input type="radio" name="expirience" id="fourthTime" value="4"/>
-					<label for="fourthTime">6-10</label></li>
-				<li class="invente col-mob-12 col-m-3 col-2"><input type="radio" name="expirience" id="fithTime" value="5"/>
-					<label for="fithTime">11-(+)</label></li>
+			<p> À propo lesPro</p>
+			<ul class="">
+
+				<li><a href="index.html" class="navigation">About Us</a></li>
+				<li><a href="index.html" class="navigation">Contact Us</a></li>
+				<li><a href="terms.html" class="navigation">Terms and Conditions</a></li>
 			</ul>
-		</li>
-
-		<li class="col-mob-12">
-			<p class="col-mob-3"><span>Ville:</span></p>
-			<select name="city" id="city">
-				<option value="montreal">Montréal</option>
-				<option value="quebec">Québec</option>
-				<option value="laval">Laval</option>
-			</select>
-		</li>
-		<li class="col-mob-12 col-m-12 col-12" ><label for="who" class="col-m-3">Comment arrivez-vous ici?</label>
-			<textarea name="who" id="who" class="col-mob-12 col-m-10 col-5"></textarea></li>
-		</ul>
-	<div class="col-mob-6 col-mob-10 col-10">
-		<input type="submit" class="go" value="Soumettre">
-	</div>
-
-	<div class="half row col-mob-10 col-10">
-		<p> Les Pros type de membre</p>
-		<div class="tab blue">
-			<input id="tab-four" type="radio" name="tabs2">
-			<label for="tab-four">Basic</label>
-			<div class="tab-content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
 			</div>
-		</div>
-		<div class="tab blue">
-			<input id="tab-five" type="radio" name="tabs2">
-			<label for="tab-five">Préférentiel</label>
-			<div class="tab-content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-			</div>
-		</div>
-		<div class="tab blue">
-			<input id="tab-six" type="radio" name="tabs2">
-			<label for="tab-six">V.I.P.</label>
-			<div class="tab-content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-			</div>
-		</div>
-	</div>
-	</div>
 
 
-
-
-</form>
-</main>
-
-<footer class="row col-mob-10" id="footerForm ">
-
-	<div class="col-mob-12">
-
-	<p>Suivez nous</p>
-	<ul class="">
-
-		<li><a href="http://www.linkedin.com/"> <img src="images/logo/linkedin.png" alt="linkedin"/></a></li>
-		<li><a href="http://www.facebook.com/"><img src="images/logo/facebook.png" alt="face"/></a></li>
-		<li><a href="https://twitter.com/"> <img src="images/logo/twitter.png" alt="twitter"/></a></li>
-	</ul>
-	</div>
-	<div class="col-mob-12">
-
-	<p> À propo lesPro</p>
-	<ul class="">
-
-		<li><a href="index.html" class="navigation">About Us</a></li>
-		<li><a href="index.html" class="navigation">Contact Us</a></li>
-		<li><a href="terms.html" class="navigation">Terms and Conditions</a></li>
-	</ul>
-	</div>
-
-
-</footer>
-
-</body>
-
+		</footer>
+	</body>
 </html>
