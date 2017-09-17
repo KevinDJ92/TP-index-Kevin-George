@@ -6,6 +6,13 @@
         <meta name="author" content="First Name Last Name">
         <meta name="description" content="Short Description of the page contents for SEO purposes">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="og:url" content="http://index.com"/>
+		<meta property="og:title" content="This is a basic text"/>
+		<meta property="og:description" content="This is a basic text"/>
+		<meta property="og:image" content="http://index.com/images/logo/logo.png" />
+		<meta property="og:image:width" content="300" />
+		<meta property="og:image:height" content="300" />
+
 		<link rel="stylesheet" href="css/css-normalize/normalize.css">
 		<link rel="stylesheet" href="css/main.css" type="text/css">
 		<!--[if lt IE 9]>
@@ -14,21 +21,21 @@
 	</head>
 	<body>
 		<header>
-			<div class="row header-top col-12">
-				<div class="col-1">
+			<div class="row header-top col-12 menu-nav">
+				<div class="col-1 col-m-10">
 					<img id="h-logo" src="images/logo/logo.png" alt="logo">
 				</div>
-				<div class="col-9">
-				<img id="h-banner" src="images/logo/banner.jpg">
+				<div id="h-banner" class="col-9">
+					<img src="images/logo/banner.jpg">
 				</div>
-				<div class="col-2">
+				<div class="col-2 col-m-2">
 					<select id="h-langue">
 						<option>Français</option>
 						<option>Anglais</option>
 					</select>
 				</div>
 			</div>
-			<nav class="row">
+			<nav class="row nav-standard menu-nav">
 				<ul id="nav-menu">
 					<li>
 						<form>
@@ -49,6 +56,14 @@
 					<li><img src="images/logo/cart-icon.png">0</li>
 				</ul>
 			</nav>
+			<div class="mobile-nav col-mob-12">
+				<!-- menu hamburger -->
+				<div class="menu-btn" id="menu-hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
 		</header>
 		<main class="row col-11 col-m-11">
 			<form id="search-bars">
@@ -201,7 +216,7 @@
 					<label for="slide4"></label>
 				</div><!-- END #active -->
 			</div> <!-- END #slider -->
-			<div class="text">
+			<div class="text col-8">
 				<h3>Nôtre mission:</h3>
 				<p>De facilité les transactions entre des gens honnête, et les professionelles qualifier et competant du Québec en donnant un espace publicitaire. </p>
 			</div>
@@ -231,9 +246,9 @@
 					</ul>
 				</div>
 			</div>
-			<div class="text">
+			<div class="text col-8">
 				<h3>Nôtre mission:</h3>
-				<p class="col-8">De facilité les transactions entre des gens honnête, et les professionelles qualifier et competant du Québec en donnant un espace publicitaire.</p>
+				<p>De facilité les transactions entre des gens honnête, et les professionelles qualifier et competant du Québec en donnant un espace publicitaire.</p>
 			</div>
 			<div class="row panel-container col-12">
 				<div class="panel">
@@ -255,14 +270,14 @@
 					</ul>
 				</div>
 			</div>
-			<div class="text">
+			<div class="text col-8">
 				<p>De facilité les transactions entre des gens honnête, et les professionelles qualifier et competant du Québec en donnant un espace publicitaire.</p>
 			</div>
 		</main>
 		<aside class="col-1 col-m-1">
 			<div>
-				<img src="images/150x200">
-				<img src="images/150x200">
+				<img src="images/150x200.jpg">
+				<img src="images/150x200.jpg">
 			</div>
 		</aside>
 		<footer class="arrow" id="footerForm">

@@ -1,23 +1,24 @@
-﻿/*****  *****/
+﻿﻿﻿// ---- COLORS
 $main-color : #f49a02;
 $nav-color: #fff;
 $footer-color-1: #68420a;
 $footer-color-2: #d12600;
 
-/*****  *****/
-$advertisement-width: 282px;
-$advertisement-margin: 0.15rem;
+// ---- WIDTH AND MARGINS
+$advertisement-width: 17.5rem;
+$advertisement-margin: 0.3rem;
 $advertisement-stars-width: 150px;
 $panel-width: 416px;
 
-/*****  *****/
+// ----
 $logo-width : 72px;
 $banner-width : 690px;
 $language-width : 85px;
 $header-form-li-margin-left-right: 5px;
-$header-input: 150px;
+$header-input: 135px;
 
 
+/***** START FLEX METHODS *****/
 @mixin flex() {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -44,9 +45,7 @@ $header-input: 150px;
 }
 /***** END TRANSITIION *****/
 
-
-
- *{
+  *{
     padding: 0;
     margin:	0;
     outline: 0;
@@ -68,8 +67,6 @@ $header-input: 150px;
 
   article, aside, details, figcaption, figure, footer, header, main, nav, section {display: block; }
 
-
-
   /******************* TEST CSS using COLORS *******************/
   .blue {background-color: blue;}
   .red {background-color: red; }
@@ -77,38 +74,17 @@ $header-input: 150px;
    aside {background-color: red;  }
 
   /******  START HEADER   ******/
-
-  #divLogoForm>img,#divLogoForm #navheader,#divLogoPayment>img,#bodyPayment #navheader{
-
-  display:none;
-
-  }
-  .header-top {
-    display:inline-block;
-    position:relative;
-    right:0px;
-
-    #h-logo {
-      display: block;
-      margin: 0 auto;
-    }
-
-    #h-banner {
-      //padding: 0 calc((100vw - (#{$logo-width} + #{$banner-width} + #{$language-width}))/2);
-      display: block;
-      left:0px;
-    }
-
-    #h-langue {
-    }
+  #h-banner {
+    display: none;
   }
 
   header {
     nav {
       background-color: $main-color;
-      float:right;
-      width: 80%;
+      float: right;
+      width: 85%;
       padding: 0.5rem;
+      min-width: 640px;
 
       #nav-menu {
         display: flex;
@@ -129,35 +105,35 @@ $header-input: 150px;
         }
       }
     }
-
-    #search-bars {
-      margin-left: 2rem;
-
-      .bar {
-        width: 80%;
-        height:35px;
-        margin-top:10px;
-      }
-
-      .bar-list {
-        position: relative;
-        left:30px;
-        bottom:15px;
-      }
-
-      & > input[type="image"] {
-        position: absolute;
-      }
-    }
   }
 
+  .menu-nav {
+    display: block;
+  }
+
+  #search-bars {
+    margin-left: 2rem;
+
+    .bar {
+      width: 80%;
+      height:35px;
+      margin-top:10px;
+    }
+
+    .bar-list {
+      position: relative;
+      left:30px;
+      bottom:15px;
+    }
+
+    & > input[type="image"] {
+      position: absolute;
+    }
+  }
   /******  END HEADER   ******/
 
   /******  START FORM CSS   ******/
   /**************************************NAV************************************************************************************/
-  .menu-nav {
-    display: none;
-  }
 
   /***** CHANGES *****/
   #logoForm {
@@ -167,8 +143,8 @@ $header-input: 150px;
 
   .mobile-nav {
     margin: 2% 0 2% 0;
-    background-color:orange;
-    padding:2%;
+    background-color: orange;
+    padding: 2%;
     border-radius: 5px;
   }
 
@@ -179,27 +155,6 @@ $header-input: 150px;
     background-color:white;
     margin:8px;
   }
-
-  /***** TESTING *****/
-
-  /*margin among lines*/
-  //.wrapper {
-  //  & > ul {
-  //    & > li {
-  //      label, p, span { font-weight:bold; }
-  //
-  //      & > ul > li {
-  //        margin: 2% 0 2% 0;
-  //      }
-  //    }
-  //  }
-  //}
-  //
-  //.formWrapper > h1 {
-  //  margin: 2% 0 2% 0;
-  //}
-
-  /***** END TESTING *****/
 
   /*margin among lines*/
   .formWrapper > ul > li,
@@ -236,7 +191,7 @@ $header-input: 150px;
   /*---------- ***** START CAROUSEL ***** ----------*/
   #overflow {
     overflow: hidden; /*permet de cacher les 4 autres diapositives qui dépassent*/
-    width: calc(#{$advertisement-width} + (2 * #{$advertisement-margin}));
+    width: calc(#{$advertisement-width}  + ( 2 * #{$advertisement-margin}));
     margin: auto;
   }
 
@@ -251,7 +206,7 @@ $header-input: 150px;
 
       /*La div inner a la somme des largeurs des 5 diapositives (500%).*/
       .inner {
-        width: 1920px;
+        width: calc(#{$advertisement-width}*7 +  (14* #{$advertisement-margin}));
         margin: 0 auto;
 
         /* Transition sur div .inner pour défiler les diapositives en une seconde*/
@@ -264,15 +219,15 @@ $header-input: 150px;
     }
 
     #slide2:checked ~ #slides .inner {
-      margin-left: calc(-1 * (#{$advertisement-width} + (2 * #{$advertisement-margin})));
+      margin-left: calc(-1 * #{$advertisement-width} + (2* #{$advertisement-margin}));
     }
 
     #slide3:checked ~ #slides .inner {
-      margin-left: calc(-1 * ((#{$advertisement-width} * 2) + (4 * #{$advertisement-margin})));
+      margin-left: calc(-1 * (#{$advertisement-width} * 2  + (4* #{$advertisement-margin})));
     }
 
     #slide4:checked ~ #slides .inner {
-      margin-left: calc(-1 * ((#{$advertisement-width} * 3) + (6 * #{$advertisement-margin})));
+      margin-left: calc(-1 * (#{$advertisement-width} * 3  + (6* #{$advertisement-margin})));
     }
 
     #active {
@@ -348,20 +303,24 @@ $header-input: 150px;
       border: 1px solid black;
       width: $panel-width;
 
-        img {
-          vertical-align: bottom;
-        }
+      img {
+        vertical-align: bottom;
+      }
 
-        .pro-links {
-            display: inline-block;
-            vertical-align: top;
+      .pro-links {
+        display: inline-block;
+        vertical-align: top;
 
-            a {
-              display: block;
-              margin: 1rem 0;
-            }
+        a {
+          display: block;
+          margin: 1rem 0;
         }
+      }
     }
+  }
+
+  .text {
+    margin-left: 15%;
   }
 
   aside {
@@ -404,112 +363,22 @@ $header-input: 150px;
       .col-mob-#{$i} { width: $width; }
     }
     /****** END STYLE GRID ******/
-/****** ACCORDION ******/
 
-/*Margin*/
+    /********************** START STYLES TABLETTE *****************/
 
-.formWrapper>div{
-
-
-  margin: 4% 0 4% 15%;
-
-}
-
-/*End Margin*/
-.tab {
-  position: relative;
-  margin-bottom: 1px;
-  width: 100%;
-  color: #fff;
-  overflow: hidden;
-}
-
-.half input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-}
-
-.half label {
-  position: relative;
-  display: block;
-  padding: 0 0 0 16px;
-  background: #16a085;
-  font-weight: bold;
-  line-height: 3;
-  cursor: pointer;
-}
-
-.blue label {
-  background: #2980b9;
-}
-
-.tab-content {
-  max-height: 0;
-  overflow: hidden;
-  background: #1abc9c;
-  -webkit-transition: max-height .35s;
-  -o-transition: max-height .35s;
-  transition: max-height .35s;
-}
-
-.blue .tab-content {
-  background: #3498db;
-}
-
-.tab-content p {
-  margin: 16px;
-}
-
-.half  input:checked ~ .tab-content {
-  max-height: 160px;
-}
-
-/********/
-
-/********/
-.half label::after {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
-  width: 48px;
-  height: 48px;
-  line-height: 3;
-  text-align: center;
-  -webkit-transition: all .35s;
-  -o-transition: all .35s;
-  transition: all .35s;
-}
-
-.half input[type=checkbox] + label::after {
-  content: "+";
-}
-.half input[type=radio] + label::after {
-  content: "\25BC";
-}
-
-.half input[type=checkbox]:checked + label::after {
-  transform: rotate(315deg);
-}
-.half input[type=radio]:checked + label::after {
-  transform: rotateX(180deg);
-}
-
-
-
-/****** END ACCORDION ******/
-
-    /****** START STYLES TABLETTE *****/
     @media only screen and (min-width:640px){
       #overflow{
-        width: calc((#{$advertisement-width} * 2) + (4 *  #{$advertisement-margin}));
+        width: calc(#{$advertisement-width} * 2  +  (4* #{$advertisement-margin}));
       }
 
-       /***** GEORGE *****/
+      .menu-nav {
+        display: block;
+      }
+
+      /***** GEORGE *****/
       /********NAV*******************/
-      #divLogoForm
-      {
+      #divLogoForm,
+      .payWrapper {
         margin:auto;
       }
 
@@ -523,54 +392,26 @@ $header-input: 150px;
         display:inline-block;
       }
 
-      /**PAYMENT**********/
-      #divLogoPayment > img {
-        display:inline-block;
-      }
-
       /*show tablet menu*/
-
-
-
-      /* #navheader {
-         display:block;
-         margin: 2% 0 2% 0;
-         border:solid;
-
-         #navheader > ul {
-           display:flex;
-           justify-content:space-around;
-
-           & li > a {
-             text-decoration:none;
-           }
-         }
-       }*/
-
-
-      #divLogoForm #navheader,#bodyPayment #navheader{
+      #navheader {
         display:block;
         margin: 2% 0 2% 0;
         border:solid;
+
+        #navheader > ul {
+          display:flex;
+          justify-content:space-around;
+
+          & li > a {
+            text-decoration:none;
+          }
+        }
       }
-
-      #divLogoForm #navheader>ul,#bodyPayment #navheader>ul{
-
-        display:flex;
-        justify-content:space-around;
-      }
-
-      #divLogoForm #navheader>ul>li>a,#bodyPayment #navheader>ul>li>a{
-
-        text-decoration:none;
-      }
-
 
       #divLogoForm > form {
         position:absolute;
         margin: 2% 0 2% 15%;
       }
-
 
       /*****Form*****/
       .formWrapper > ul > li:nth-child(12) {
@@ -628,17 +469,27 @@ $header-input: 150px;
     }/****** END STYLES TABLETTE  ****** /
 
   /****** START STYLES DESKTOP ******/
+/*960px*/
     @media only screen and (min-width:960px){
       #overflow {
-        width: calc((#{$advertisement-width} * 3) + (6 * #{$advertisement-margin}));
+        width: calc((#{$advertisement-width} * 3) +  (6* #{$advertisement-margin}));
+      }
+
+      .header-top {
+        display:inline-block;
+        position:relative;
+
+        #h-logo {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      #h-banner {
+        display: block;
       }
 
       /*******NAV*********/
-      #divLogoForm
-      {
-        margin:auto;
-      }
-
       #divLogoForm > form{
         display:none;
         position:relative;
