@@ -1,5 +1,4 @@
-﻿﻿﻿// ---- COLORS
-$main-color : #f49a02;
+﻿$main-color : #f49a02;
 $nav-color: #fff;
 $footer-color-1: #68420a;
 $footer-color-2: #d12600;
@@ -256,6 +255,11 @@ $header-input: 135px;
 
       .ad-left-part img {
         display: block;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
       }
 
       .ad-right-part {
