@@ -74,6 +74,28 @@ $header-input: 135px;
    aside {background-color: red;  }
 
   /******  START HEADER   ******/
+  #h-logo:hover {
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+  }
+
+@keyframes rotation {
+  from {
+    -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+  }
+
+  to {
+    -ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+  }
+}
+
   #h-banner {
     display: none;
   }
@@ -93,19 +115,39 @@ $header-input: 135px;
 
         li {
           margin: auto $header-form-li-margin-left-right;
+
+          input {
+            width: $header-input;
+          }
+
         }
 
         #h-login {
-          //width: calc(#{$header-input} + (#{$header-form-li-margin-left-right} * 2) * 3);
           display: flex;
-
-          li input {
-            width: $header-input;
-          }
         }
       }
     }
   }
+
+@keyframes disparition {
+
+  /*etat initial = img visible a 100%*/
+  0%{
+    opacity:1;
+    border:5px solid red;
+  }
+  /*a la moitie de la duree de l'animation  = img disparait a 100%*/
+  50%{
+    opacity:0;
+    border:5px solid yellow;
+  }
+  /*a la fin de l'animation = img visible a 100%*/
+  100%{
+    opacity:1;
+    border:5px solid blue;
+  }
+
+}
 
   .menu-nav {
     display: block;
