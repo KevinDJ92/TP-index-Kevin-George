@@ -21,58 +21,45 @@
 	</head>
 	<body id="bodyForm">
 	<header>
-		<div class="row header-top col-12 menu-nav">
-			<div class="col-1 col-m-10">
-				<img id="h-logo" src="images/logo/logo.png" alt="logo">
-			</div>
-			<div id="h-banner" class="col-9">
-				<img src="images/logo/banner.jpg" alt="banner">
-			</div>
-			<div class="col-2 col-m-2">
-				<select id="h-langue">
-					<option>Français</option>
-					<option>Anglais</option>
-				</select>
-			</div>
-		</div>
-		<nav class="row nav-standard menu-nav">
-			<ul id="nav-menu">
-				<li>
-					<form>
-						<ul id="h-login">
-							<li>
-								<input type="email" name="email" placeholder="email@email.com" required>
-							</li>
-							<li>
-								<input type="password" name="password" placeholder="password" required/>
-							</li>
-							<li>
-								<input type="submit" value="Connexion">
-							</li>
-						</ul>
-					</form>
-				</li>
-				<li><a href="formulaire.html">Devenez un membre</a></li>
-				<li><img src="images/logo/cart-icon.png">0</li>
-			</ul>
-		</nav>
-		<div class="mobile-nav col-mob-12">
-			<!-- menu hamburger -->
-			<div class="menu-btn" id="menu-hamburger">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-		</div>
+        <div id="divLogoForm" class="row col-m-10 col-8">
+
+                <a href="index.html" class="col-mob-3 col-1"><img id="h-logo" src="images/logo/logo.png" alt="logo"></a>
+                <img src="images/logo/banner.jpg" alt="banner">
+
+            <nav id="navheader" class="col-m-12 col-12">
+            <ul>
+                    <li class="col-m-4 col-4">
+                        <input type="email" name="email" placeholder="email@email.com" required>
+                    </li>
+                    <li class="col-m-4 col-4">
+                        <input type="password" name="password" placeholder="password" required/>
+                    </li>
+                    <li class="col-m-4 col-4">
+                        <input type="submit" value="Connexion">
+                    </li>
+                </ul>
+            </nav>
+            <form class="col-mob-9">
+                <input type="search" placeholder="chercher" class="col-mob-12"/>
+                <input type="submit" value="Soumettre" class="">
+            </form>
+
+        </div>
+        <div class="mobile-nav col-mob-12">
+            <!-- menu hamburger -->
+            <div class="menu-btn" id="menu-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
 	</header>
 
 	<main>
-		<form class="col-mob-12 col-m-8 col-8">
-			<input type="search" placeholder="chercher"class="col-mob-12"/>
-			<input type="submit" value="Soumettre" class="">
-		</form>
 
-	<form class="formWrapper col-10" action="pending"  id="formFormul">
+
+	<form class="formWrapper col-10" action="payment.html"  id="formFormul" method="post">
 		<h1 class=""> Devenez un Membre: </h1>
 		<ul class="row">
 			<li class="col-mob-12" ><label for="name" class="col-mob-12 col-m-3">Prenom <span>(*):</span></label>
@@ -97,7 +84,7 @@
 			<li class="col-mob-12"><label for="date"  class="col-mob-12 col-m-3">Date <span>(*):</span></label>
 				<input type="date" name="date" id="date" class="col-mob-12 col-m-9" required/></li>
 			<li class="col-mob-12"><label for="tel" class="col-mob-12 col-m-3">Téléphone <span>(*):</span></label>
-				<input type="tel" name="tel" id="tel" pattern="^\(?\d{3}\)?(-| )?\d{3}(-| )?\d{4}$" placeholder="000-000-0000"class="col-mob-12 col-m-9"></li>
+				<input type="tel" name="tel" id="tel" pattern="^\(?\d{3}\)?(-| )?\d{3}(-| )?\d{4}$" placeholder="000-000-0000" class="col-mob-12 col-m-9"></li>
 			<li class="col-mob-12"><label for="field" class="col-mob-12 col-m-3">Domaine :</label>
 				<input list="infoField" type="text" id="field" class="col-mob-12 col-m-9" >
 				<datalist id="infoField">
@@ -142,8 +129,8 @@
 				<input id="tab-four" type="radio" name="tabs2">
 				<label for="tab-four">Basic</label>
 				<div class="tab-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-				</div>
+				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+			    </div>
 			</div>
 			<div class="tab blue">
 				<input id="tab-five" type="radio" name="tabs2">
@@ -160,11 +147,37 @@
 				</div>
 			</div>
 		</div>
-		</div>
+
 	</form>
 	</main>
 
-    <footer class="row col-mob-10" id="footerForm ">
+    <footer class="row col-mob-10" id="footerForm">
+
+
+        <div class="col-mob-12">
+
+			<div itemscope itemtype="http://schema.org/Organization">
+				<span itemprop="name">Les Pro</span>
+				Contact Details:
+				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					Main address:
+					<span itemprop="streetAddress">38 avenue de l'Opera</span>
+					<span itemprop="postalCode">F-75002</span>
+					<span itemprop="addressLocality">Montréal, Canada</span>
+					,
+				</div>
+				Tel:<span itemprop="telephone">( 51 4) 42 68 53 00 </span>,
+				Fax:<span itemprop="faxNumber">( 33 1) 42 68 53 01 </span>,
+				E-mail: <span itemprop="email">lesPro@lesPro.com</span>
+
+			</div>
+
+
+                <a href="index.html" class="navigation">About Us</a>
+                <a href="index.html" class="navigation">Contact Us</a>
+                <a href="terms.html" class="navigation">Terms and Conditions</a>
+
+        	</div>
 
         <div class="col-mob-12">
 
@@ -174,31 +187,6 @@
                 <li><a href="http://www.linkedin.com/"> <img src="images/logo/linkedin.png" alt="linkedin"/></a></li>
                 <li><a href="http://www.facebook.com/"><img src="images/logo/facebook.png" alt="face"/></a></li>
                 <li><a href="https://twitter.com/"> <img src="images/logo/twitter.png" alt="twitter"/></a></li>
-            </ul>
-        </div>
-        <div class="col-mob-12">
-
-            <p> À propo lesPro</p>
-            <ul class="">
-
-                <div itemscope itemtype="http://schema.org/Organization">
-                    <li><span itemprop="name">Les Pro</span></li>
-                    Contact Details:
-                    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                        Main address:
-                        <li><span itemprop="streetAddress">38 avenue de l'Opera</span></li>
-                        <li><span itemprop="postalCode">F-75002</span></li>
-                        <li><span itemprop="addressLocality">Montréal, Canada</span></li>
-                    </div>
-                    <li>Tel:<span itemprop="telephone">(  1 )514 42 68 53 00 </span></li>
-                    <li>Fax:<span itemprop="faxNumber">( 33 1) 42 68 53 01 </span></li>
-                    <li>E-mail: <span itemprop="email">lesPros@lesPros.com</span></li>
-
-                </div>
-
-                <li><a href="index.html" class="navigation">About Us</a></li>
-                <li><a href="index.html" class="navigation">Contact Us</a></li>
-                <li><a href="terms.html" class="navigation">Terms and Conditions</a></li>
             </ul>
         </div>
 

@@ -21,52 +21,43 @@
 		
 	</head>
 	<body id="bodyPayment">
-		<header>
-			<div class="row header-top col-12 menu-nav">
-				<div class="col-1 col-m-10">
-					<img id="h-logo" src="images/logo/logo.png" alt="logo">
-				</div>
-				<div id="h-banner" class="col-9">
-					<img src="images/logo/banner.jpg">
-				</div>
-				<div class="col-2 col-m-2">
-					<select id="h-langue">
-						<option>Français</option>
-						<option>Anglais</option>
-					</select>
-				</div>
-			</div>
-			<nav class="row nav-standard menu-nav">
-				<ul id="nav-menu">
-					<li>
-						<form>
-							<ul id="h-login">
-								<li>
-									<input type="email" name="email" placeholder="email@email.com" required>
-								</li>
-								<li>
-									<input type="password" name="password" placeholder="password" required/>
-								</li>
-								<li>
-									<input type="submit" value="Connexion">
-								</li>
-							</ul>
-						</form>
-					</li>
-					<li><a href="formulaire.html">Devenez un membre</a></li>
-					<li><img src="images/logo/cart-icon.png">0</li>
-				</ul>
-			</nav>
-			<div class="mobile-nav col-mob-12">
-				<!-- menu hamburger -->
-				<div class="menu-btn" id="menu-hamburger">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
-		</header>
-		<form class="payWrapper row col-10">
+    <header>
+        <div id="divLogoForm" class="row col-m-10 col-8">
+
+            <a href="index.html" class="col-mob-3 col-1"><img id="h-logo" src="images/logo/logo.png" alt="logo"></a>
+            <img src="images/logo/banner.jpg" alt="banner">
+
+            <nav id="navheader" class="col-m-12 col-12">
+                <ul>
+                    <li class="col-m-4 col-4">
+                        <input type="email" name="email" placeholder="email@email.com" required>
+                    </li>
+                    <li class="col-m-4 col-4">
+                        <input type="password" name="password" placeholder="password" required/>
+                    </li>
+                    <li class="col-m-4 col-4">
+                        <input type="submit" value="Connexion">
+                    </li>
+                </ul>
+            </nav>
+            <form class="col-mob-9">
+                <input type="search" placeholder="chercher" class="col-mob-12"/>
+                <input type="submit" value="Soumettre" class="">
+            </form>
+
+        </div>
+        <div class="mobile-nav col-mob-12">
+            <!-- menu hamburger -->
+            <div class="menu-btn" id="menu-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+    </header>
+
+    <form class="payWrapper row col-10">
 			<ul>
 				<li class="col-mob-12">
 					<p class="col-m-3"><span>Pays :</span></p>
@@ -91,12 +82,12 @@
 					<ul class="row">
 						<li class="col-mob-2"><input type="radio" name="creditCard" id="visa" value="visa" /> 
 						<label for="visa"><img src="images/logo/visa.jpg" alt="lespro" id="visaImg" class=""/></label></li>
-						<li class="col-mob-2"><input type="radio" name="creditCard" id="americanExpress" value="americanExpress"/> 
-						<label for="americanExpress"><img src="images/logo/americanExpress.jpg" alt="lespro" id="americanExpressImg" class=""/></label></li>
-						<li class="col-mob-2"><input type="radio" name="creditCard" id="masterCard" value="masterCard"/> 
+						<li class="col-mob-2"><input type="radio" name="creditCard" id="americanExpress" value="americanExpress"/>
+						<label for="americanExpress">A.E.<img src="images/logo/americanExpress.jpg" alt="lespro" id="americanExpressImg" class=""/></label></li>
+						<li class="col-mob-2"><input type="radio" name="creditCard" id="masterCard" value="masterCard"/>
 						<label for="masterCard"><img src="images/logo/masterCard.jpg" alt="lespro" id="masterCardImg" class=""/></label></li>
 						<li class="col-mob-2"><input type="radio" name="creditCard" id="discover" value="discover"/> 
-						<label for="discover"><img src="images/logo/discover.jpg" alt="lespro" id="discoverImg" class=""/></label></li>
+						<label for="discover">Disc.<img src="images/logo/discover.jpg" alt="lespro" id="discoverImg" class=""/></label></li>
 						<li class="col-mob-2"><input type="radio" name="creditCard" id="payPal" value="payPal"/> 
 						<label for="payPal"><img src="images/logo/payPal.jpg" alt="lespro" id="payPalImg" class=""/></label></li>
 					</ul>
@@ -140,17 +131,47 @@
 				<input type="submit" class="" value="PAYER">
 			</div>
 		</form>
-		<footer class="arrow" id="footerPayment">
-			<ul class="col-mob-6">
-				<li><a href="index.html" class="navigation">About Us</a></li>	
-				<li><a href="index.html" class="navigation">Contact Us</a></li>
-				<li><a href="terms.html" class="navigation">Terms and Conditions</a></li>
-			</ul>
-			<ul class="col-mob-6">
-				<li class="col-mob-4 col-m-12"><a href="http://www.linkedin.com/"> <img src="images/linkedin.png" alt="linkedin"/></a></li>
-				<li class="col-mob-4 col-m-12"><a href="http://www.facebook.com/"><img src="images/facebook.png" alt="face"/></a></li>
-				<li class="col-mob-4 col-m-12"><a href="https://twitter.com/"> <img src="images/twitter.png" alt="twitter"/></a></li>
-			</ul>
-		</footer>
-	</body>
+    <footer class="row col-mob-10" id="footerForm">
+
+
+        <div class="col-mob-12">
+
+            <div itemscope itemtype="http://schema.org/Organization">
+                <span itemprop="name">Les Pro</span>
+                Contact Details:
+                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    Main address:
+                    <span itemprop="streetAddress">38 avenue de l'Opera</span>
+                    <span itemprop="postalCode">F-75002</span>
+                    <span itemprop="addressLocality">Montréal, Canada</span>
+                    ,
+                </div>
+                Tel:<span itemprop="telephone">( 51 4) 42 68 53 00 </span>,
+                Fax:<span itemprop="faxNumber">( 33 1) 42 68 53 01 </span>,
+                E-mail: <span itemprop="email">lesPro@lesPro.com</span>
+
+            </div>
+
+
+            <a href="index.html" class="navigation">About Us</a>
+            <a href="index.html" class="navigation">Contact Us</a>
+            <a href="terms.html" class="navigation">Terms and Conditions</a>
+
+        </div>
+
+        <div class="col-mob-12">
+
+            <p>Suivez nous</p>
+            <ul class="">
+
+                <li><a href="http://www.linkedin.com/"> <img src="images/logo/linkedin.png" alt="linkedin"/></a></li>
+                <li><a href="http://www.facebook.com/"><img src="images/logo/facebook.png" alt="face"/></a></li>
+                <li><a href="https://twitter.com/"> <img src="images/logo/twitter.png" alt="twitter"/></a></li>
+            </ul>
+        </div>
+
+
+    </footer>
+
+    </body>
 </html>
